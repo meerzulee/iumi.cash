@@ -1,4 +1,4 @@
-# iumi.cash
+# iumi cash landing page
 
 ## Project setup
 ```
