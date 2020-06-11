@@ -8,11 +8,11 @@
         <!-- linkss -->
         <div class="flex items-center">
           <!-- <router-link to="/">Home</router-link>| -->
-          <a href="#" class="nav-links">Home</a>
-          <a href="#" class="nav-links">Features</a>
-          <a href="#" class="nav-links">Pricing</a>
-          <a href="#" class="nav-links">FAQs</a>
-          <a href="#" class="nav-links">Contacts</a>
+          <a href="#home" class="nav-links">Home</a>
+          <a href="#features" class="nav-links">Features</a>
+          <a href="#pricing" class="nav-links">Pricing</a>
+          <a href="#faqs" class="nav-links">FAQs</a>
+          <a href="#contacts" class="nav-links">Contacts</a>
           <!-- <router-link to="/">About</router-link> -->
         </div>
         <!-- cta -->

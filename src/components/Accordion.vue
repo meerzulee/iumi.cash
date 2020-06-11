@@ -56,7 +56,7 @@
 </template>
 <script>
 import { TransitionExpand } from "vue-transition-expand";
-import "vue-transition-expand/dist/vue-transition-expand.css";
+import "../assets/css/vue-transition-expand.css";
 
 export default {
   components: {

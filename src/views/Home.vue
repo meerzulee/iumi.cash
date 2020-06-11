@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!-- header -->
-    <div class="bg-ghost-white h-screen relative">
+    <div class="bg-ghost-white h-screen relative" id="home">
       <img src="../assets/images/shape1.png" class="absolute top-0 right-0 z-10" alt />
       <div class="container mx-auto flex flex-col pt-32">
         <div class="flex justify-between mt-1">
@@ -49,7 +49,7 @@
         </div>
       </div>
     </div>
-    <div class="h-screen pt-12">
+    <div class="h-screen pt-12" id="features">
       <div class="container mx-auto flex flex-col items-center mt-10">
         <h1 class="text-4xl font-bold text-jacksons_purple-100 mt-2">App Feature</h1>
         <p class="text-3xl text-center mt-5">
@@ -86,7 +86,7 @@
         </div>
       </div>
     </div>
-    <div class="h-screen bg-ghost-white pt-12 overflow-hidden">
+    <div class="h-screen bg-ghost-white pt-12 overflow-hidden" id="pricing">
       <div class="container mx-auto flex flex-col items-center mt-10 h-full">
         <h1 class="text-4xl font-bold text-jacksons_purple-100 mt-2">Pricing</h1>
         <p class="text-3xl text-center mt-5">No cost for the App. No monthly account keeping fees.</p>
@@ -138,7 +138,7 @@
         </div>
       </div>
     </div>
-    <div class="h-screen pt-12 h-full">
+    <div class="h-screen pt-12 h-full" id="faqs">
       <div class="container mx-auto flex flex-col items-center pt-10 h-full">
         <h1 class="text-4xl font-bold text-jacksons_purple-100 mt-2">Frequently Asked Questions</h1>
         <div class="flex justify-between w-full mt-24">
@@ -153,7 +153,10 @@
         </div>
       </div>
     </div>
-    <div class="h-screen pt-12 h-full relative flex justify-center items-start bg-ghost-white pt-7">
+    <div
+      class="h-screen pt-12 h-full relative flex justify-center items-start bg-ghost-white pt-7"
+      id="contacts"
+    >
       <img src="../assets/images/shape2.png" class="absolute top-0 left-0 h-full z-0" alt />
 
       <div
