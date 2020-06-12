@@ -8,12 +8,14 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "tailwindcss": "^1.4.6",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vue-transition-expand": "^0.1.0"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.2.0",
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-eslint": "~4.4.0",
     "@vue/cli-plugin-router": "~4.4.0",

@@ -2,8 +2,10 @@
   <div id="app" class="relative">
     <div id="nav" class="w-screen fixed navbar z-50">
       <div class="container mx-auto flex justify-between py-4">
-        <div>
-          <img src="./assets/images/logo-header.png" alt />
+        <div class="pointer">
+          <a href="#home">
+            <img src="./assets/images/logo-header.png" alt />
+          </a>
         </div>
         <!-- linkss -->
         <div class="flex items-center">

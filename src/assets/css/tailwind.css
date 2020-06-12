@@ -6,6 +6,7 @@ html {
 	overflow: -moz-scrollbars-none;
 	scrollbar-width: none;
 }
+
 body {
 	margin: 0;
 }
@@ -70,6 +71,10 @@ textarea::placeholder {
 
 :hover.card-shadow {
 	box-shadow: -2px 8px 10px rgba(0, 0, 0, 0.25);
+}
+
+.card-shadow {
+	box-shadow: none;
 }
 
 .footer-gradient {

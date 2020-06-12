@@ -199,7 +199,7 @@
           </div>
         </div>
         <div class="footer-gradient w-full flex flex-col pt-12 pb-8 px-40 items-center">
-          <h1 class="text-3xl text-white font-bold">Stay Connect With US</h1>
+          <h1 class="text-3xl text-white font-bold text-center ml-5">Stay Connect With US</h1>
           <div class="flex justify-between text-white w-full">
             <div class="flex flex-col">
               <a href="#" class="font-semibold text-lg">Term & Conditions</a>
