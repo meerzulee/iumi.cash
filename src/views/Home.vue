@@ -2,7 +2,11 @@
   <div class="home">
     <!-- header -->
     <div class="bg-ghost-white h-screen relative" id="home">
-      <img src="../assets/images/shape1.png" class="absolute max-w-2xl top-0 right-0 z-10" alt />
+      <img
+        src="../assets/images/shape1.png"
+        class="absolute tablet:max-w-xl max-w-2xl top-0 right-0 z-10"
+        alt
+      />
       <div class="container mx-auto flex flex-col pt-32">
         <div class="flex justify-between tablet-port:justify-around mt-1">
           <div class="flex flex-col mt-32 pt-10 tablet:ml-16">
@@ -27,7 +31,7 @@
               </a>
             </div>
           </div>
-          <img src="../assets/images/phone1.png" class="z-20 max-w-xs2" alt />
+          <img src="../assets/images/phone1.png" class="z-20 w-phone h-full" alt />
         </div>
       </div>
       <div class="absolute bottom-0 w-full flex justify-center mb-12">
@@ -53,8 +57,8 @@
         />
       </div>
     </div>
-    <div class="min-h-screen pt-12" id="features">
-      <div class="container mx-auto flex flex-col items-center mt-10">
+    <div class="h-screen pt-12" id="features">
+      <div class="container mx-auto flex flex-col items-center tablet:mt-4 mt-10">
         <h1 class="text-4xl font-bold text-jacksons_purple-100 mt-2">App Feature</h1>
         <p class="text-3xl text-center mt-5 z-30">
           Just needs an internet connection via 3/4G, LTE, WiFi or satellite.
@@ -62,7 +66,7 @@
         </p>
         <!-- 6.5rem -->
         <div class="mt-10 flex w-full justify-between tablet-port:justify-around z-30">
-          <img src="../assets/images/phone2.png" class="max-w-xs2" alt />
+          <img src="../assets/images/phone2.png" class="w-phone h-full" alt />
           <div class="flex flex-col max-w-3xl px-20">
             <!-- hover cards -->
             <div
@@ -90,18 +94,15 @@
         </div>
       </div>
     </div>
-    <div class="min-h-screen pb-10 bg-ghost-white pt-12 overflow-hidden" id="pricing">
-      <div class="container mx-auto flex flex-col items-center mt-10 h-full">
+    <div class="h-screen bg-ghost-white tablet:pt-4 pt-12 overflow-hidden" id="pricing">
+      <div class="container mx-auto flex flex-col items-center tablet:mt-4 mt -10 h-full relative">
         <h1 class="text-4xl font-bold text-jacksons_purple-100 mt-2">Pricing</h1>
         <p
           class="text-3xl text-center tablet-port:mt-2 mt-5"
         >No cost for the App. No monthly account keeping fees.</p>
-        <div class="flex relative w-full h-full tablet-port:px-20">
+        <div class="flex w-full h-full tablet-port:px-20">
           <!-- img -->
-          <div class="absolute bottom-0 right-0 tablet-port:pr-20">
-            <img src="../assets/images/girl.png" class="max-w-xl px-8 tablet:max-w-lg" alt />
-          </div>
-          <div class="flex mt-24">
+          <div class="flex mt-24 tablet:mt-12">
             <div class="max-w-xs w-full px-3 -ml-3 mr-4">
               <div class="flex flex-col items-center rounded-card bg-white w-full card-shadow">
                 <div
@@ -142,14 +143,17 @@
             </div>
           </div>
         </div>
+        <div class="absolute bottom-0 right-0 tablet-port:pr-20">
+          <img src="../assets/images/girl.png" class="max-w-xl px-10 tablet:max-w-lg" alt />
+        </div>
       </div>
     </div>
-    <div class="min-h-screen tablet:pt-8 pt-12 h-full" id="faqs">
+    <div class="h-screen tablet:pt-8 pt-12 h-full" id="faqs">
       <div class="container mx-auto flex flex-col items-center pt-10 h-full">
         <h1 class="text-4xl font-bold text-jacksons_purple-100 mt-2">Frequently Asked Questions</h1>
         <div class="flex justify-between tablet-port:justify-around w-full tablet:mt-8 mt-24">
           <div>
-            <img src="../assets/images/phone3.png" class="max-w-xs2" alt />
+            <img src="../assets/images/phone3.png" class="w-phone h-full" alt />
           </div>
           <div class="max-w-2xl w-full pt-4">
             <!-- accordion -->

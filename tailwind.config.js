@@ -2,7 +2,7 @@ module.exports = {
 	purge: [],
 	theme: {
 		fontFamily: {
-			body: [ 'Myriad Set Pro' ]
+			body: ['Myriad Set Pro']
 		},
 		extend: {
 			colors: {
@@ -23,7 +23,8 @@ module.exports = {
 			spacing: {
 				'7': '1.75rem',
 				'18': '4.5rem',
-				'28': '7rem'
+				'28': '7rem',
+				phone: '21.375rem'
 			},
 			boxShadow: {
 				card: '-2px 8px 10px rgba(0, 0, 0, 0.25)'
@@ -73,14 +74,14 @@ module.exports = {
 	},
 
 	variants: {
-		textColor: [ 'responsive', 'hover', 'focus', 'group-hover' ],
-		boxShadow: [ 'responsive', 'hover', 'focus', 'active', 'group-hover' ]
+		textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+		boxShadow: ['responsive', 'hover', 'focus', 'active', 'group-hover']
 	},
 	corePlugins: {
 		container: false
 	},
 	plugins: [
-		function({ addComponents }) {
+		function ({ addComponents }) {
 			addComponents({
 				'.container': {
 					maxWidth: '100%',
@@ -98,7 +99,7 @@ module.exports = {
 						maxWidth: '900px'
 					},
 					'@screen tablet': {
-						maxWidth: '800px'
+						maxWidth: '768px'
 					},
 					'@screen tablet-port': {
 						maxWidth: '100%'
