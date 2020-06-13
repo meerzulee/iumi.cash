@@ -72,9 +72,9 @@
               :key="index"
             >
               <!-- svg -->
-              <div class="h-16 mr-10">
+              <div class="h-12 mr-10">
                 <svg
-                  class="h-16 group-hover:text-jacksons_purple-200 fill-current"
+                  class="h-12 group-hover:text-jacksons_purple-200 fill-current"
                   viewBox="0 0 119 119"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
