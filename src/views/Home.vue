@@ -2,10 +2,10 @@
   <div class="home">
     <!-- header -->
     <div class="bg-ghost-white h-screen relative" id="home">
-      <img src="../assets/images/shape1.png" class="absolute top-0 right-0 z-10" alt />
+      <img src="../assets/images/shape1.png" class="absolute max-w-2xl top-0 right-0 z-10" alt />
       <div class="container mx-auto flex flex-col pt-32">
         <div class="flex justify-between mt-1">
-          <div class="flex flex-col mt-32 pt-10">
+          <div class="flex flex-col mt-32 pt-10 tablet:ml-16">
             <h1 class="text-5xl font-bold text-jacksons_purple-200 leading-tight">
               Quick, easy and secure
               <br />next generation e-wallet
@@ -27,26 +27,30 @@
               </a>
             </div>
           </div>
-          <img src="../assets/images/phone1.png" class="z-20" alt />
+          <img src="../assets/images/phone1.png" class="z-20 max-w-xs2" alt />
         </div>
-        <div class="flex justify-center mt-12">
-          <svg
-            class="w-5 text-jacksons_purple-200 mr-3"
-            viewBox="0 0 22 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11.5534 7.95605C12.0607 7.95605 12.4725 8.35064 12.4725 8.83683V12.3599C12.4725 12.8461 12.0607 13.2407 11.5534 13.2407C11.046 13.2407 10.6343 12.8461 10.6343 12.3599V8.83683C10.6343 8.35064 11.046 7.95605 11.5534 7.95605Z"
-              fill="#323790"
-            />
-            <path
-              d="M11.4432 1.49316C16.9686 1.49316 21.4485 5.79156 21.4485 11.0932V21.8932C21.4485 27.1948 16.9686 31.4932 11.4432 31.4932C5.91784 31.4932 1.43799 27.1948 1.43799 21.8932V11.0932C1.43799 5.79156 5.91784 1.49316 11.4432 1.49316Z"
-              stroke="#323790"
-            />
-          </svg>
-          <p class="text-xl text-jacksons_purple-200">Scroll down for more</p>
-        </div>
+      </div>
+      <div class="absolute bottom-0 w-full flex justify-center mb-12">
+        <!-- <svg
+          class="w-5 text-jacksons_purple-200 mr-3"
+          viewBox="0 0 22 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.5534 7.95605C12.0607 7.95605 12.4725 8.35064 12.4725 8.83683V12.3599C12.4725 12.8461 12.0607 13.2407 11.5534 13.2407C11.046 13.2407 10.6343 12.8461 10.6343 12.3599V8.83683C10.6343 8.35064 11.046 7.95605 11.5534 7.95605Z"
+            fill="#323790"
+          />
+          <path
+            d="M11.4432 1.49316C16.9686 1.49316 21.4485 5.79156 21.4485 11.0932V21.8932C21.4485 27.1948 16.9686 31.4932 11.4432 31.4932C5.91784 31.4932 1.43799 27.1948 1.43799 21.8932V11.0932C1.43799 5.79156 5.91784 1.49316 11.4432 1.49316Z"
+            stroke="#323790"
+          />
+        </svg>-->
+        <ScrollIcon
+          v-scroll-to="{el: '#features',
+         duration: 1100,
+         easing: 'ease-in-out'}"
+        />
       </div>
     </div>
     <div class="h-screen pt-12" id="features">
@@ -62,7 +66,7 @@
           <div class="flex flex-col max-w-3xl px-20">
             <!-- hover cards -->
             <div
-              class="group hover:shadow-card hover-card"
+              class="group hover-card"
               :class=" index !=0 ? 'mt-10' : ''"
               v-for="(item, index) in cards"
               :key="index"
@@ -93,7 +97,11 @@
         <div class="flex relative w-full h-full">
           <!-- img -->
           <div class="absolute bottom-0 right-0">
-            <img src="../assets/images/girl.png" class="w-11/12" alt />
+            <img
+              src="../assets/images/girl.png"
+              class="w-11/12 laptop:w-9/12 laptop-only:w-11/12 laptop:mx-auto"
+              alt
+            />
           </div>
           <div class="flex mt-24">
             <div class="max-w-xs w-full px-3 -ml-3 mr-4">
@@ -157,7 +165,7 @@
       class="h-screen pt-12 h-full relative flex justify-center items-start bg-ghost-white pt-7"
       id="contacts"
     >
-      <img src="../assets/images/shape2.png" class="absolute top-0 left-0 h-full z-0" alt />
+      <img src="../assets/images/shape2.png" class="absolute max-w-2xl top-0 left-0 h-full z-0" alt />
 
       <div
         class="max-w-7xl bg-red-700 w-full mt-40 z-10 rounded-semi-card overflow-hidden flex flex-col"
@@ -282,10 +290,12 @@
 
 <script>
 import Accordion from "../components/Accordion";
+import ScrollIcon from "../components/ScrollIcon";
 export default {
   name: "Home",
   components: {
-    Accordion
+    Accordion,
+    ScrollIcon
   },
 
   data() {

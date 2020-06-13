@@ -11,22 +11,23 @@ body {
 	margin: 0;
 }
 
-@screen tablet {
-	html {
-		font-size: 80%;
-	}
-}
+
 
 @screen laptop {
 	html {
 		font-size: 85%;
 	}
 }
+@screen tablet {
+	html {
+		font-size: 80%;
+	}
+}
 
 @tailwind components;
 
 .nav-links {
-	@apply text-xl mx-5;
+	@apply text-xl mx-5 cursor-pointer;
 }
 
 .hover-card {
@@ -34,7 +35,7 @@ body {
 }
 
 .hover-card:hover {
-	@apply bg-white;
+	@apply bg-white shadow-card;
 }
 
 .footer-input {
@@ -84,8 +85,6 @@ textarea::placeholder {
 :hover.card-shadow {
 	box-shadow: -2px 8px 10px rgba(0, 0, 0, 0.25);
 }
-
-
 
 .footer-gradient {
 	background: linear-gradient(96.25deg, #7a539d 0.16%, #323790 52.86%, #9752d5 99.37%);

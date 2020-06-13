@@ -10,11 +10,36 @@
         <!-- linkss -->
         <div class="flex items-center">
           <!-- <router-link to="/">Home</router-link>| -->
-          <a href="#home" class="nav-links">Home</a>
-          <a href="#features" class="nav-links">Features</a>
-          <a href="#pricing" class="nav-links">Pricing</a>
-          <a href="#faqs" class="nav-links">FAQs</a>
-          <a href="#contacts" class="nav-links">Contacts</a>
+          <a
+            class="nav-links"
+            v-scroll-to="{el: '#home',
+         duration: 1100,
+         easing: 'ease-in-out'}"
+          >Home</a>
+          <a
+            class="nav-links"
+            v-scroll-to="{el: '#features',
+         duration: 1100,
+         easing: 'ease-in-out'}"
+          >Features</a>
+          <a
+            class="nav-links"
+            v-scroll-to="{el: '#pricing',
+         duration: 1100,
+         easing: 'ease-in-out'}"
+          >Pricing</a>
+          <a
+            class="nav-links"
+            v-scroll-to="{el: '#faqs',
+         duration: 1100,
+         easing: 'ease-in-out'}"
+          >FAQs</a>
+          <a
+            class="nav-links"
+            v-scroll-to="{el: '#contacts',
+         duration: 1100,
+         easing: 'ease-in-out'}"
+          >Contacts</a>
           <!-- <router-link to="/">About</router-link> -->
         </div>
         <!-- cta -->

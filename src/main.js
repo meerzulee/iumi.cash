@@ -4,6 +4,11 @@ import router from './router'
 
 import '@/assets/css/tailwind.css'
 
+const VueScrollTo = require('vue-scrollto')
+
+
+Vue.use(VueScrollTo)
+
 Vue.config.productionTip = false
 
 new Vue({

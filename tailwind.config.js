@@ -29,8 +29,12 @@ module.exports = {
         card: '-2px 8px 10px rgba(0, 0, 0, 0.25)'
       },
       maxWidth: {
+        xs: '20rem',
+        xs2: '21,375rem',
+        '2xl': '43rem',
         '7xl': '82.5rem'
       },
+
       screens: {
         'big-desktop': {
           'min': '1800px'
@@ -39,6 +43,10 @@ module.exports = {
           'max': '1800px'
         },
         'laptop': {
+          'max': '1366px'
+        },
+        'laptop-only': {
+          'min': '1280px',
           'max': '1366px'
         },
         'tablet': {
@@ -80,7 +88,7 @@ module.exports = {
             maxWidth: '700px',
           },
           '@screen lg': {
-            maxWidth: '900px',
+            maxWidth: '1000px',
           },
           '@screen xl': {
             maxWidth: '1180px',
