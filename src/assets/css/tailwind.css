@@ -11,18 +11,36 @@ body {
 	margin: 0;
 }
 
+@screen desktop {
+	html {
+		font-size: 87.5%;
+	}
+}
 
+@screen big-laptop {
+	html {
+		font-size: 75%;
+	}
+}
 
 @screen laptop {
 	html {
-		font-size: 85%;
+		font-size: 70%;
 	}
 }
+
 @screen tablet {
 	html {
-		font-size: 80%;
+		font-size: 65%;
 	}
 }
+
+@screen tablet-port {
+	html {
+		font-size: 50%;
+	}
+}
+
 
 @tailwind components;
 
@@ -41,6 +59,7 @@ body {
 .footer-input {
 	@apply appearance-none bg-transparent text-jacksons_purple-200 text-xl w-48 px-1 border-b border-black;
 }
+
 
 .footer-input:focus {
 	@apply outline-none border-jacksons_purple-200;

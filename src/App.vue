@@ -2,14 +2,14 @@
   <div id="app" class="relative">
     <div id="nav" class="w-screen fixed navbar z-50">
       <div class="container mx-auto flex justify-between py-4">
-        <div class="pointer">
+        <div class="pointer tablet-port:ml-10">
           <a
             class="cursor-pointer"
             v-scroll-to="{el: '#home',
          duration: 1100,
          easing: 'ease-in-out'}"
           >
-            <img src="./assets/images/logo-header.png" alt />
+            <img src="./assets/images/logo-header.png" class="h-10" alt />
           </a>
         </div>
         <!-- linkss -->
@@ -52,9 +52,7 @@
         <a
           href="#"
           class="mr-10 bg-transparent border-jacksons_purple-200 rounded-full border-2 text-lg uppercase text-jacksons_purple-200 font-semibold px-5 py-1 flex items-center hover:border-transparent hover:text-white hover:bg-jacksons_purple-200"
-        >
-          <span>get the app</span>
-        </a>
+        >get the app</a>
       </div>
     </div>
 

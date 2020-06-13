@@ -4,7 +4,7 @@
     <div class="bg-ghost-white h-screen relative" id="home">
       <img src="../assets/images/shape1.png" class="absolute max-w-2xl top-0 right-0 z-10" alt />
       <div class="container mx-auto flex flex-col pt-32">
-        <div class="flex justify-between mt-1">
+        <div class="flex justify-between tablet-port:justify-around mt-1">
           <div class="flex flex-col mt-32 pt-10 tablet:ml-16">
             <h1 class="text-5xl font-bold text-jacksons_purple-200 leading-tight">
               Quick, easy and secure
@@ -53,16 +53,16 @@
         />
       </div>
     </div>
-    <div class="h-screen pt-12" id="features">
+    <div class="min-h-screen pt-12" id="features">
       <div class="container mx-auto flex flex-col items-center mt-10">
         <h1 class="text-4xl font-bold text-jacksons_purple-100 mt-2">App Feature</h1>
-        <p class="text-3xl text-center mt-5">
+        <p class="text-3xl text-center mt-5 z-30">
           Just needs an internet connection via 3/4G, LTE, WiFi or satellite.
           <br />Safe, secure blockchain solution to protect your money
         </p>
         <!-- 6.5rem -->
-        <div class="mt-10 flex w-full justify-between">
-          <img src="../assets/images/phone2.png" alt />
+        <div class="mt-10 flex w-full justify-between tablet-port:justify-around z-30">
+          <img src="../assets/images/phone2.png" class="max-w-xs2" alt />
           <div class="flex flex-col max-w-3xl px-20">
             <!-- hover cards -->
             <div
@@ -72,9 +72,9 @@
               :key="index"
             >
               <!-- svg -->
-              <div class="w-24 mr-10">
+              <div class="h-16 mr-10">
                 <svg
-                  class="w-24 group-hover:text-jacksons_purple-200 fill-current"
+                  class="h-16 group-hover:text-jacksons_purple-200 fill-current"
                   viewBox="0 0 119 119"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -90,18 +90,16 @@
         </div>
       </div>
     </div>
-    <div class="h-screen bg-ghost-white pt-12 overflow-hidden" id="pricing">
+    <div class="min-h-screen pb-10 bg-ghost-white pt-12 overflow-hidden" id="pricing">
       <div class="container mx-auto flex flex-col items-center mt-10 h-full">
         <h1 class="text-4xl font-bold text-jacksons_purple-100 mt-2">Pricing</h1>
-        <p class="text-3xl text-center mt-5">No cost for the App. No monthly account keeping fees.</p>
-        <div class="flex relative w-full h-full">
+        <p
+          class="text-3xl text-center tablet-port:mt-2 mt-5"
+        >No cost for the App. No monthly account keeping fees.</p>
+        <div class="flex relative w-full h-full tablet-port:px-20">
           <!-- img -->
-          <div class="absolute bottom-0 right-0">
-            <img
-              src="../assets/images/girl.png"
-              class="w-11/12 laptop:w-9/12 laptop-only:w-11/12 laptop:mx-auto"
-              alt
-            />
+          <div class="absolute bottom-0 right-0 tablet-port:pr-20">
+            <img src="../assets/images/girl.png" class="max-w-xl px-8 tablet:max-w-lg" alt />
           </div>
           <div class="flex mt-24">
             <div class="max-w-xs w-full px-3 -ml-3 mr-4">
@@ -146,12 +144,12 @@
         </div>
       </div>
     </div>
-    <div class="h-screen pt-12 h-full" id="faqs">
+    <div class="min-h-screen tablet:pt-8 pt-12 h-full" id="faqs">
       <div class="container mx-auto flex flex-col items-center pt-10 h-full">
         <h1 class="text-4xl font-bold text-jacksons_purple-100 mt-2">Frequently Asked Questions</h1>
-        <div class="flex justify-between w-full mt-24">
+        <div class="flex justify-between tablet-port:justify-around w-full tablet:mt-8 mt-24">
           <div>
-            <img src="../assets/images/phone3.png" alt />
+            <img src="../assets/images/phone3.png" class="max-w-xs2" alt />
           </div>
           <div class="max-w-2xl w-full pt-4">
             <!-- accordion -->
@@ -162,26 +160,28 @@
       </div>
     </div>
     <div
-      class="h-screen pt-12 h-full relative flex justify-center items-start bg-ghost-white pt-7"
+      class="min-h-screen pt-12 h-full relative flex justify-center items-start bg-ghost-white pt-7"
       id="contacts"
     >
       <img src="../assets/images/shape2.png" class="absolute max-w-2xl top-0 left-0 h-full z-0" alt />
 
       <div
-        class="max-w-7xl bg-red-700 w-full mt-40 z-10 rounded-semi-card overflow-hidden flex flex-col"
+        class="max-w-7xl bg-red-700 w-full tablet-port:mt-20 mt-40 z-10 rounded-semi-card overflow-hidden flex flex-col"
       >
         <div class="flex w-full bg-white">
-          <div class="w-1/2 flex px-18 py-10 flex flex-col">
+          <div
+            class="w-1/2 tablet-port:w-2/3 tablet-port:px-10 tablet-port:items-center px-18 py-10 flex flex-col"
+          >
             <h1 class="text-5xl font-bold text-jacksons_purple-200">Contact Us</h1>
-            <div class="mt-6 flex justify-between">
+            <div class="mt-6 flex justify-between tablet-port:w-full">
               <input type="text" class="footer-input" placeholder="First Name" />
               <input type="text" class="footer-input" placeholder="Last Name" />
             </div>
-            <div class="mt-12 flex justify-between">
+            <div class="mt-12 flex justify-between tablet-port:w-full">
               <input type="text" class="footer-input" placeholder="Email" />
               <input type="text" class="footer-input" placeholder="Phone" />
             </div>
-            <div class="mt-12 flex flex-col items-start justify-start">
+            <div class="mt-12 flex flex-col tablet-port:w-full items-start justify-start">
               <textarea
                 type="text"
                 class="footer-input w-2/3 focus:outline-none"
