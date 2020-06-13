@@ -25,14 +25,42 @@ module.exports = {
         '18': '4.5rem',
         '28': '7rem'
       },
+      boxShadow: {
+        card: '-2px 8px 10px rgba(0, 0, 0, 0.25)'
+      },
       maxWidth: {
         '7xl': '82.5rem'
+      },
+      screens: {
+        'big-desktop': {
+          'min': '1800px'
+        },
+        'desktop': {
+          'max': '1800px'
+        },
+        'laptop': {
+          'max': '1366px'
+        },
+        'tablet': {
+          'max': '1200px'
+        },
+        'tablet-port': {
+          'max': '900px'
+        },
+        'phone': {
+          'max': '600px'
+        },
+        'iphone': {
+          'max': '450px'
+        },
+
       }
     },
   },
 
   variants: {
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+    boxShadow: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
   },
   corePlugins: {
     container: false
@@ -46,13 +74,13 @@ module.exports = {
         '.container': {
           maxWidth: '100%',
           '@screen sm': {
-            maxWidth: '600px',
+            maxWidth: '100%',
           },
           '@screen md': {
             maxWidth: '700px',
           },
           '@screen lg': {
-            maxWidth: '800px',
+            maxWidth: '900px',
           },
           '@screen xl': {
             maxWidth: '1180px',

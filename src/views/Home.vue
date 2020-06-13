@@ -62,7 +62,7 @@
           <div class="flex flex-col max-w-3xl px-20">
             <!-- hover cards -->
             <div
-              class="group card-shadow hover-card"
+              class="group hover:shadow-card hover-card"
               :class=" index !=0 ? 'mt-10' : ''"
               v-for="(item, index) in cards"
               :key="index"
