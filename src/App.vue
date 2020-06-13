@@ -3,7 +3,12 @@
     <div id="nav" class="w-screen fixed navbar z-50">
       <div class="container mx-auto flex justify-between py-4">
         <div class="pointer">
-          <a href="#home">
+          <a
+            class="cursor-pointer"
+            v-scroll-to="{el: '#home',
+         duration: 1100,
+         easing: 'ease-in-out'}"
+          >
             <img src="./assets/images/logo-header.png" alt />
           </a>
         </div>
