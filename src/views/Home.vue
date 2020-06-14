@@ -43,12 +43,12 @@
           </div>
           <img
             src="../assets/images/phone1.png"
-            class="z-20 w-phone h-full phone:absolute phone:h-auto phone:w-9/12 phone:z-0 phone:-bottom-60"
+            class="z-20 w-phone h-full phone:absolute phone:h-auto iphone:w-9/12 phone:w-10/12 phone:z-0 iphone:-bottom-60 phone:-bottom-60"
             alt
           />
         </div>
       </div>
-      <div class="absolute bottom-0 w-full flex justify-center mb-12">
+      <div class="absolute bottom-0 w-full flex justify-center mb-12 phone:mb-28 iphone:mb-12">
         <ScrollIcon
           v-scroll-to="{el: '#features',
          duration: 1100,
