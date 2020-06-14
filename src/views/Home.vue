@@ -114,10 +114,12 @@
       </div>
     </div>
     <div
-      class="h-screen phone:h-auto bg-ghost-white tablet:pt-4 pt-12 phone:pb-16 overflow-hidden"
+      class="h-screen phone:h-auto bg-ghost-white tablet:pt-4 pt-12 overflow-hidden"
       id="pricing"
     >
-      <div class="container mx-auto flex flex-col items-center tablet:mt-4 mt-10 h-full relative">
+      <div
+        class="container mx-auto flex flex-col items-center tablet:mt-4 mt-10 h-full phone:pb-16 relative"
+      >
         <h1
           class="text-4xl phone:text-3xl font-bold text-jacksons_purple-100 mt-2 phone:mt-10"
         >Pricing</h1>
@@ -129,7 +131,7 @@
         <div class="flex w-full h-full tablet-port:px-20 phone:mt-1">
           <!-- img -->
           <div class="flex flex-row phone:w-full phone:flex-col mt-24 tablet:mt-12">
-            <div class="max-w-xs phone:max-w-full phone:px-21 w-full px-3 -ml-3 mr-4">
+            <div class="max-w-xs phone:max-w-full phone:px-21 w-full px-3 -ml-3 mr-4 phone:z-10">
               <div class="flex flex-col items-center rounded-card bg-white w-full card-shadow">
                 <div
                   class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-28 px-24"
@@ -147,7 +149,7 @@
                 >Get started</a>
               </div>
             </div>
-            <div class="max-w-xs phone:max-w-full phone:px-18 w-full px-3 mt-20">
+            <div class="max-w-xs phone:max-w-full phone:px-18 w-full px-3 mt-20 phone:z-10">
               <div class="flex flex-col items-center rounded-card bg-white w-full card-shadow">
                 <div
                   class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-28 px-16 phone:pb-2 phone:px-0"
@@ -170,19 +172,25 @@
             </div>
           </div>
         </div>
-        <div class="absolute bottom-0 right-0 tablet-port:pr-20 phone:hidden">
-          <img src="../assets/images/girl.png" class="max-w-xl px-10 tablet:max-w-lg" alt />
+        <div class="absolute bottom-0 -right-1/4 phone:pr-0 tablet-port:pr-20">
+          <img
+            src="../assets/images/girl.png"
+            class="max-w-xl px-10 phone:px-0 phone:max-w-xl tablet:max-w-lg phone:pl-3"
+            alt
+          />
         </div>
       </div>
     </div>
     <div class="h-screen phone:h-auto phone:pb-32 tablet:pt-8 pt-12 h-full" id="faqs">
       <div class="container mx-auto flex flex-col items-center pt-10 h-full">
-        <h1 class="text-4xl font-bold text-jacksons_purple-100 mt-2">Frequently Asked Questions</h1>
+        <h1
+          class="text-4xl phone:text-3xl font-bold text-jacksons_purple-100 mt-2"
+        >Frequently Asked Questions</h1>
         <div class="flex justify-between tablet-port:justify-around w-full tablet:mt-8 mt-24">
           <div>
             <img src="../assets/images/phone3.png" class="w-phone h-full phone:hidden" alt />
           </div>
-          <div class="max-w-2xl w-full pt-4 phone:mx-auto">
+          <div class="max-w-2xl w-full pt-4 phone:mx-auto iphone:px-10">
             <!-- accordion -->
             <Accordion />
             <!-- /accordion -->
@@ -196,7 +204,7 @@
     >
       <img
         src="../assets/images/shape2.png"
-        class="absolute max-w-2xl phone:max-w-xs top-0 left-0 h-full z-0"
+        class="absolute max-w-2xl phone:max-w-xs top-0 left-0 h-full z-0 iphone:hidden"
         alt
       />
 
@@ -245,11 +253,11 @@
             ></iframe>
           </div>
         </div>
-        <div class="footer-gradient w-full flex flex-col pt-12 pb-8 px-40 items-center">
+        <div class="footer-gradient w-full flex flex-col pt-12 pb-8 px-40 phone:px-20 items-center">
           <h1
             class="text-3xl phone:text-4xl text-white font-bold text-center ml-5"
           >Stay Connect With US</h1>
-          <div class="flex justify-between phone:flex-col text-white w-full phone:mt-4">
+          <div class="flex justify-between phone:flex-col text-white w-full phone:mt-6">
             <div class="flex flex-col phone:flex-row phone:justify-between">
               <a href="#" class="font-semibold text-lg phone:text-2xl">Term & Conditions</a>
               <a
@@ -269,7 +277,7 @@
               <div class="flex flex-col">
                 <a
                   href="#"
-                  class="font-semibold text-lg phone:text-center phone:text-2xl"
+                  class="font-semibold text-lg phone:text-center phone:mt-2 phone:text-2xl"
                 >info@iumi.cash</a>
                 <div class="flex justify-between phone:justify-center mt-2">
                   <a href="#">
