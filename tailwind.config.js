@@ -22,12 +22,17 @@ module.exports = {
 			},
 			spacing: {
 				'7': '1.75rem',
+				'15': '3.5rem',
 				'18': '4.5rem',
+				'21': '5.5rem',
 				'28': '7rem',
 				phone: '21.375rem'
 			},
 			boxShadow: {
 				card: '-2px 8px 10px rgba(0, 0, 0, 0.25)'
+			},
+			height: {
+				map: '32rem',
 			},
 			maxWidth: {
 				xs: '20rem',
@@ -35,6 +40,15 @@ module.exports = {
 				xl: '38.75rem',
 				'2xl': '43rem',
 				'7xl': '82.5rem'
+			},
+			inset: {
+				'1/2': '50%',
+				'-1/2': '-50%',
+				'-3/4': '-75%',
+				'-1/4': '-25%',
+				'1/4': '25%',
+				'-15': '-15%',
+				'-60': '-60%'
 			},
 
 			screens: {
@@ -65,6 +79,9 @@ module.exports = {
 				},
 				phone: {
 					max: '600px'
+				},
+				'phone-up': {
+					min: '600px'
 				},
 				iphone: {
 					max: '450px'

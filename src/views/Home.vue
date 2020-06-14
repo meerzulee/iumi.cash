@@ -1,55 +1,54 @@
 <template>
   <div class="home">
     <!-- header -->
-    <div class="bg-ghost-white h-screen relative" id="home">
+    <div class="bg-ghost-white h-screen relative phone:overflow-hidden" id="home">
       <img
         src="../assets/images/shape1.png"
-        class="absolute tablet:max-w-xl max-w-2xl top-0 right-0 z-10"
+        class="absolute tablet:max-w-xl max-w-2xl top-0 right-0 z-10 phone:hidden"
         alt
       />
-      <div class="container mx-auto flex flex-col pt-32">
-        <div class="flex justify-between tablet-port:justify-around mt-1">
-          <div class="flex flex-col mt-32 pt-10 tablet:ml-16">
-            <h1 class="text-5xl font-bold text-jacksons_purple-200 leading-tight">
+      <div class="container mx-auto flex flex-col pt-32 phone:h-full">
+        <div
+          class="flex justify-between tablet-port:justify-around mt-1 phone:relative phone:h-full"
+        >
+          <div class="flex flex-col mt-32 pt-10 phone:ml-0 tablet:ml-16">
+            <h1 class="text-5xl font-bold text-jacksons_purple-200 leading-tight text-center">
               Quick, easy and secure
               <br />next generation e-wallet
               <br />for your smart phone
             </h1>
-            <div class="flex mt-10">
+            <div class="flex mt-10 phone:mt-20 items-center phone:justify-around">
               <a
                 href="#"
-                class="mr-5 flex text-lg font-bold bg-gradient items-center text-white py-3 px-4 rounded-full"
+                class="mr-5 flex text-lg phone:text-2xl font-bold bg-gradient items-center text-white py-3 px-4 phone:px-8 rounded-full"
               >
-                <img src="../assets/images/apple.svg" alt class="h-6 w-6 mr-3" />App Store
+                <img
+                  src="../assets/images/apple.svg"
+                  alt
+                  class="h-6 w-6 phone:h-8 phone:w-8 mb-2 mr-3"
+                />App Store
               </a>
 
               <a
                 href="#"
-                class="flex text-lg font-bold border-2 border-jacksons_purple-100 items-center text-jacksons_purple-200 py-3 px-4 rounded-full"
+                class="flex text-lg phone:text-2xl phone:text-xl font-bold border-2 border-jacksons_purple-100 items-center text-jacksons_purple-200 py-3 px-4 phone:px-8 rounded-full"
               >
-                <img src="../assets/images/google-play.svg" alt class="h-6 w-6 mr-3" />Play Store
+                <img
+                  src="../assets/images/google-play.svg"
+                  alt
+                  class="h-6 w-6 phone:h-8 phone:w-8 mr-3"
+                />Play Store
               </a>
             </div>
           </div>
-          <img src="../assets/images/phone1.png" class="z-20 w-phone h-full" alt />
+          <img
+            src="../assets/images/phone1.png"
+            class="z-20 w-phone h-full phone:absolute phone:h-auto phone:w-9/12 phone:z-0 phone:-bottom-60"
+            alt
+          />
         </div>
       </div>
       <div class="absolute bottom-0 w-full flex justify-center mb-12">
-        <!-- <svg
-          class="w-5 text-jacksons_purple-200 mr-3"
-          viewBox="0 0 22 32"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M11.5534 7.95605C12.0607 7.95605 12.4725 8.35064 12.4725 8.83683V12.3599C12.4725 12.8461 12.0607 13.2407 11.5534 13.2407C11.046 13.2407 10.6343 12.8461 10.6343 12.3599V8.83683C10.6343 8.35064 11.046 7.95605 11.5534 7.95605Z"
-            fill="#323790"
-          />
-          <path
-            d="M11.4432 1.49316C16.9686 1.49316 21.4485 5.79156 21.4485 11.0932V21.8932C21.4485 27.1948 16.9686 31.4932 11.4432 31.4932C5.91784 31.4932 1.43799 27.1948 1.43799 21.8932V11.0932C1.43799 5.79156 5.91784 1.49316 11.4432 1.49316Z"
-            stroke="#323790"
-          />
-        </svg>-->
         <ScrollIcon
           v-scroll-to="{el: '#features',
          duration: 1100,
@@ -57,17 +56,27 @@
         />
       </div>
     </div>
-    <div class="h-screen pt-12" id="features">
-      <div class="container mx-auto flex flex-col items-center tablet:mt-4 mt-10">
-        <h1 class="text-4xl font-bold text-jacksons_purple-100 mt-2">App Feature</h1>
-        <p class="text-3xl text-center mt-5 z-30">
-          Just needs an internet connection via 3/4G, LTE, WiFi or satellite.
-          <br />Safe, secure blockchain solution to protect your money
+    <div class="h-screen pt-12 phone:overflow-hidden relative" id="features">
+      <div class="container mx-auto flex flex-col phone:h-full items-center tablet:mt-4 mt-10">
+        <h1
+          class="text-4xl phone:text-3xl font-bold text-jacksons_purple-100 mt-2 phone:mt-10"
+        >App Feature</h1>
+        <p class="text-3xl phone:font-semibold text-center mt-5 z-30 phone:text-2xl">
+          Just needs an internet connection via 3/4G,
+          <br class="phone-up:hidden" />LTE, WiFi or satellite.
+          <br class="phone:hidden" />Safe, secure blockchain
+          <br class="phone-up:hidden" />solution to protect your money
         </p>
         <!-- 6.5rem -->
-        <div class="mt-10 flex w-full justify-between tablet-port:justify-around z-30">
-          <img src="../assets/images/phone2.png" class="w-phone h-full" alt />
-          <div class="flex flex-col max-w-3xl px-20">
+        <div
+          class="mt-10 phone:mt-20 flex w-full phone:h-full phone:relative justify-between tablet-port:justify-around z-30"
+        >
+          <img
+            src="../assets/images/phone2.png"
+            class="w-phone h-full phone:absolute phone:hidden"
+            alt
+          />
+          <div class="flex flex-col max-w-3xl px-20 phone:px-15">
             <!-- hover cards -->
             <div
               class="group hover-card"
@@ -76,9 +85,9 @@
               :key="index"
             >
               <!-- svg -->
-              <div class="h-12 mr-10">
+              <div class="h-12 phone:h-20 mr-10">
                 <svg
-                  class="h-12 group-hover:text-jacksons_purple-200 fill-current"
+                  class="h-12 phone:h-20 group-hover:text-jacksons_purple-200 fill-current"
                   viewBox="0 0 119 119"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -86,76 +95,94 @@
                 />
               </div>
               <div class="flex flex-col">
-                <h3 class="text-xl text-jacksons_purple-200 font-semibold">{{item.title}}</h3>
-                <p class="text-lg font-semibold">{{item.desc}}</p>
+                <h3
+                  class="text-xl phone:text-3xl text-jacksons_purple-200 font-semibold"
+                >{{item.title}}</h3>
+                <p class="text-lg phone:text-xl font-semibold">{{item.desc}}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="absolute bottom-0 w-full flex justify-center mb-12">
+        <ScrollIcon
+          v-scroll-to="{el: '#pricing',
+         duration: 1100,
+         easing: 'ease-in-out'}"
+          :dark="true"
+        />
+      </div>
     </div>
-    <div class="h-screen bg-ghost-white tablet:pt-4 pt-12 overflow-hidden" id="pricing">
-      <div class="container mx-auto flex flex-col items-center tablet:mt-4 mt -10 h-full relative">
-        <h1 class="text-4xl font-bold text-jacksons_purple-100 mt-2">Pricing</h1>
-        <p
-          class="text-3xl text-center tablet-port:mt-2 mt-5"
-        >No cost for the App. No monthly account keeping fees.</p>
-        <div class="flex w-full h-full tablet-port:px-20">
+    <div
+      class="h-screen phone:h-auto bg-ghost-white tablet:pt-4 pt-12 phone:pb-16 overflow-hidden"
+      id="pricing"
+    >
+      <div class="container mx-auto flex flex-col items-center tablet:mt-4 mt-10 h-full relative">
+        <h1
+          class="text-4xl phone:text-3xl font-bold text-jacksons_purple-100 mt-2 phone:mt-10"
+        >Pricing</h1>
+        <p class="text-3xl phone:text-2xl text-center font-semibold tablet-port:mt-2 mt-5">
+          No cost for the App.
+          No monthly
+          <br class="phone-up:hidden" />account keeping fees.
+        </p>
+        <div class="flex w-full h-full tablet-port:px-20 phone:mt-1">
           <!-- img -->
-          <div class="flex mt-24 tablet:mt-12">
-            <div class="max-w-xs w-full px-3 -ml-3 mr-4">
+          <div class="flex flex-row phone:w-full phone:flex-col mt-24 tablet:mt-12">
+            <div class="max-w-xs phone:max-w-full phone:px-21 w-full px-3 -ml-3 mr-4">
               <div class="flex flex-col items-center rounded-card bg-white w-full card-shadow">
                 <div
-                  class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-40 px-24"
+                  class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-28 px-24"
                 >
-                  <h3 class="uppercase text-xl font-bold text-white">basic</h3>
+                  <h3 class="text-xl phone:text-2xl font-semibold text-white phone:mt-2">Basic</h3>
                 </div>
-                <p class="text-xl text-center my-10">
-                  Flat 1% fee on all
-                  <br />transfers,
+                <p class="text-xl phone:text-2xl text-center my-10">
+                  Flat 1% fee
+                  on all transfers,
                   <br />paid by the sender.
                 </p>
                 <a
                   href="#"
-                  class="mb-12 px-4 py-1 bg-gradient w-auto text-white rounded-full text-xl card-shadow"
+                  class="mb-12 px-4 phone:px-7 py-1 bg-gradient w-auto text-white rounded-full text-xl phone:text-2xl card-shadow"
                 >Get started</a>
               </div>
             </div>
-            <div class="max-w-xs w-full px-3 mt-20">
+            <div class="max-w-xs phone:max-w-full phone:px-18 w-full px-3 mt-20">
               <div class="flex flex-col items-center rounded-card bg-white w-full card-shadow">
                 <div
-                  class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-40 px-16"
+                  class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-28 px-16 phone:pb-2 phone:px-0"
                 >
-                  <h3
-                    class="uppercase text-xl font-bold mt-5 text-center text-white"
-                  >High Volume Business Customers</h3>
+                  <h3 class="text-xl phone:text-2xl font-semibold mt-5 text-center text-white">
+                    High Volume
+                    <br class="phone-up:hidden" />Business Customers
+                  </h3>
                 </div>
-                <p class="text-xl text-center my-10">
+                <p class="text-xl phone:text-2xl text-center my-10">
                   Contact us
                   <br />info@iumi.cash
                   <br />for volume discounts
                 </p>
                 <a
                   href="#"
-                  class="mb-12 px-4 py-1 bg-gradient w-auto text-white rounded-full text-xl card-shadow"
+                  class="mb-12 px-4 phone:px-7 py-1 bg-gradient w-auto text-white rounded-full text-xl phone:text-2xl card-shadow"
                 >Get started</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="absolute bottom-0 right-0 tablet-port:pr-20">
+        <div class="absolute bottom-0 right-0 tablet-port:pr-20 phone:hidden">
           <img src="../assets/images/girl.png" class="max-w-xl px-10 tablet:max-w-lg" alt />
         </div>
       </div>
     </div>
-    <div class="h-screen tablet:pt-8 pt-12 h-full" id="faqs">
+    <div class="h-screen phone:h-auto phone:pb-32 tablet:pt-8 pt-12 h-full" id="faqs">
       <div class="container mx-auto flex flex-col items-center pt-10 h-full">
         <h1 class="text-4xl font-bold text-jacksons_purple-100 mt-2">Frequently Asked Questions</h1>
         <div class="flex justify-between tablet-port:justify-around w-full tablet:mt-8 mt-24">
           <div>
-            <img src="../assets/images/phone3.png" class="w-phone h-full" alt />
+            <img src="../assets/images/phone3.png" class="w-phone h-full phone:hidden" alt />
           </div>
-          <div class="max-w-2xl w-full pt-4">
+          <div class="max-w-2xl w-full pt-4 phone:mx-auto">
             <!-- accordion -->
             <Accordion />
             <!-- /accordion -->
@@ -164,45 +191,53 @@
       </div>
     </div>
     <div
-      class="min-h-screen pt-12 h-full relative flex justify-center items-start bg-ghost-white pt-7"
+      class="min-h-screen phone:max-h-full pt-12 h-full relative flex justify-center items-start bg-ghost-white pt-7"
       id="contacts"
     >
-      <img src="../assets/images/shape2.png" class="absolute max-w-2xl top-0 left-0 h-full z-0" alt />
+      <img
+        src="../assets/images/shape2.png"
+        class="absolute max-w-2xl phone:max-w-xs top-0 left-0 h-full z-0"
+        alt
+      />
 
       <div
         class="max-w-7xl bg-red-700 w-full tablet-port:mt-20 mt-40 z-10 rounded-semi-card overflow-hidden flex flex-col"
       >
-        <div class="flex w-full bg-white">
+        <div class="flex w-full bg-white phone:flex-col">
           <div
-            class="w-1/2 tablet-port:w-2/3 tablet-port:px-10 tablet-port:items-center px-18 py-10 flex flex-col"
+            class="w-1/2 phone:w-full phone:px-20 tablet-port:w-2/3 tablet-port:px-10 tablet-port:items-center px-18 py-10 flex flex-col"
           >
             <h1 class="text-5xl font-bold text-jacksons_purple-200">Contact Us</h1>
-            <div class="mt-6 flex justify-between tablet-port:w-full">
+            <div
+              class="mt-6 flex justify-between phone:justify-start phone:flex-col tablet-port:w-full"
+            >
               <input type="text" class="footer-input" placeholder="First Name" />
               <input type="text" class="footer-input" placeholder="Last Name" />
             </div>
-            <div class="mt-12 flex justify-between tablet-port:w-full">
+            <div class="mt-12 phone:mt-4 flex justify-between phone:flex-col tablet-port:w-full">
               <input type="text" class="footer-input" placeholder="Email" />
               <input type="text" class="footer-input" placeholder="Phone" />
             </div>
-            <div class="mt-12 flex flex-col tablet-port:w-full items-start justify-start">
+            <div
+              class="mt-12 phone:mt-4 flex flex-col phone:items-center tablet-port:w-full items-start justify-start"
+            >
               <textarea
                 type="text"
-                class="footer-input w-2/3 focus:outline-none"
+                class="footer-input w-2/3 phone:w-full focus:outline-none"
                 placeholder="Message"
                 rows="3"
               />
 
               <a
                 href="#"
-                class="mt-8 w-auto rounded-full py-2 text-white px-5 bg-gradient font-semibold text-xl"
+                class="mt-8 phone:mt-12 w-auto rounded-full py-2 text-white px-5 bg-gradient font-medium text-xl phone:text-3xl"
               >Submit now</a>
             </div>
           </div>
-          <div class="w-1/2">
+          <div class="w-1/2 phone:w-full">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125947.28655873938!2d159.90324947461454!3d-9.434314977607366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6f285b8f3406a2bb%3A0x43fa3daff6ec04dc!2sHoniara%2C%20Solomon%20Islands!5e0!3m2!1sen!2skg!4v1591094396881!5m2!1sen!2skg"
-              class="h-full w-full"
+              class="h-full w-full phone:h-map"
               frameborder="0"
               style="border:0;"
               aria-hidden="false"
@@ -211,78 +246,88 @@
           </div>
         </div>
         <div class="footer-gradient w-full flex flex-col pt-12 pb-8 px-40 items-center">
-          <h1 class="text-3xl text-white font-bold text-center ml-5">Stay Connect With US</h1>
-          <div class="flex justify-between text-white w-full">
-            <div class="flex flex-col">
-              <a href="#" class="font-semibold text-lg">Term & Conditions</a>
-              <a href="#" class="font-semibold text-lg mt-4">Privacy Policy</a>
+          <h1
+            class="text-3xl phone:text-4xl text-white font-bold text-center ml-5"
+          >Stay Connect With US</h1>
+          <div class="flex justify-between phone:flex-col text-white w-full phone:mt-4">
+            <div class="flex flex-col phone:flex-row phone:justify-between">
+              <a href="#" class="font-semibold text-lg phone:text-2xl">Term & Conditions</a>
+              <a
+                href="#"
+                class="font-semibold text-lg phone:text-2xl phone:mt-0 mt-4"
+              >Privacy Policy</a>
             </div>
-            <div>
-              <p class="text-lg text-center">
-                <b>Address:</b>
-                <br />C/- Baoro and Associates,
-                <br />Top Floor, Ysato Building,
-                <br />Commonwealth Street, Honiara.
-              </p>
-            </div>
-            <div class="flex flex-col">
-              <a href="#" class="font-semibold">info@iumi.cash</a>
-              <div class="flex justify-between mt-2">
-                <a href="#">
-                  <svg
-                    class="w-7 h-7"
-                    viewBox="0 0 31 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.6948 30C23.9834 30 30.7026 23.2843 30.7026 15C30.7026 6.71573 23.9834 0 15.6948 0C7.40624 0 0.687012 6.71573 0.687012 15C0.687012 23.2843 7.40624 30 15.6948 30Z"
-                      fill="#3B5998"
-                    />
-                    <path
-                      d="M19.5532 15.4236H16.8144V25.3403H12.6649V15.4236H10.6914V11.9384H12.6649V9.68313C12.6649 8.07036 13.44 5.54492 16.8514 5.54492L19.925 5.55763V8.94056H17.6949C17.3291 8.94056 16.8147 9.1212 16.8147 9.89054V11.9417H19.9157L19.5532 15.4236Z"
-                      fill="white"
-                    />
-                  </svg>
-                </a>
-                <a href="#">
-                  <svg
-                    class="w-7 h-7"
-                    viewBox="0 0 31 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M20.1939 7.98047H11.2479C9.81994 7.98047 8.6582 9.14166 8.6582 10.5689V19.5108C8.6582 20.9381 9.81994 22.0996 11.2479 22.0996H20.1939C21.6219 22.0996 22.7839 20.9384 22.7839 19.5108V10.5689C22.7839 9.14166 21.6222 7.98047 20.1939 7.98047ZM15.7209 19.688C13.157 19.688 11.071 17.6029 11.071 15.0399C11.071 12.4772 13.157 10.3921 15.7209 10.3921C18.2851 10.3921 20.3712 12.4772 20.3712 15.0399C20.3712 17.6026 18.2848 19.688 15.7209 19.688ZM20.5207 11.3531C19.9137 11.3531 19.4201 10.8597 19.4201 10.2534C19.4201 9.64705 19.9137 9.15369 20.5207 9.15369C21.1273 9.15369 21.6209 9.64705 21.6209 10.2534C21.6209 10.8597 21.1273 11.3531 20.5207 11.3531Z"
-                      fill="white"
-                    />
-                    <path
-                      d="M15.7204 12.3569C14.2403 12.3569 13.0352 13.5608 13.0352 15.04C13.0352 16.5199 14.2403 17.7241 15.7204 17.7241C17.2011 17.7241 18.4053 16.5199 18.4053 15.04C18.4053 13.5611 17.2008 12.3569 15.7204 12.3569Z"
-                      fill="white"
-                    />
-                    <path
-                      d="M15.7207 0C7.43245 0 0.712891 6.71606 0.712891 15C0.712891 23.2839 7.43245 30 15.7207 30C24.009 30 30.7285 23.2839 30.7285 15C30.7285 6.71606 24.009 0 15.7207 0ZM24.7483 19.5111C24.7483 22.0215 22.7054 24.0634 20.1937 24.0634H11.2477C8.7363 24.0634 6.69307 22.0215 6.69307 19.5111V10.5698C6.69307 8.05967 8.7363 6.01751 11.2477 6.01751H20.1937C22.7054 6.01751 24.7483 8.05967 24.7483 10.5698V19.5111Z"
-                      fill="white"
-                    />
-                  </svg>
-                </a>
-                <a href="#">
-                  <svg
-                    class="w-7 h-7"
-                    viewBox="0 0 31 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.7471 30C24.0357 30 30.7549 23.2843 30.7549 15C30.7549 6.71573 24.0357 0 15.7471 0C7.45848 0 0.739258 6.71573 0.739258 15C0.739258 23.2843 7.45848 30 15.7471 30Z"
-                      fill="#007AB9"
-                    />
-                    <path
-                      d="M24.7148 16.2072V22.3916H21.1275V16.6217C21.1275 15.1729 20.6096 14.1835 19.3108 14.1835C18.3196 14.1835 17.7307 14.8496 17.4707 15.4946C17.3763 15.7251 17.3519 16.0452 17.3519 16.3684V22.3913H13.7643C13.7643 22.3913 13.8125 12.619 13.7643 11.6074H17.3522V13.1356C17.345 13.1476 17.3348 13.1594 17.3284 13.1709H17.3522V13.1356C17.8289 12.4024 18.6791 11.3542 20.5853 11.3542C22.9454 11.3542 24.7148 12.8955 24.7148 16.2072ZM10.0115 6.40918C8.7843 6.40918 7.98145 7.21432 7.98145 8.27215C7.98145 9.30751 8.76102 10.1359 9.96437 10.1359H9.98764C11.2389 10.1359 12.0169 9.30751 12.0169 8.27215C11.993 7.21432 11.2389 6.40918 10.0115 6.40918ZM8.19467 22.3916H11.7809V11.6074H8.19467V22.3916Z"
-                      fill="#F1F2F2"
-                    />
-                  </svg>
-                </a>
+            <div class="flex phone:flex-col phone:flex-col-reverse my-4">
+              <div class="phone:my-8 phone:flex phone:flex-col items-center">
+                <p class="font-bold text-lg phone:text-2xl">Address:</p>
+                <p class="text-lg phone:text-2xl text-center mt-2">
+                  C/- Baoro and Associates,
+                  <br class="phone:hidden" />Top Floor, Ysato Building,
+                  <br class="phone:hidden" />Commonwealth Street, Honiara.
+                </p>
+              </div>
+              <div class="flex flex-col">
+                <a
+                  href="#"
+                  class="font-semibold text-lg phone:text-center phone:text-2xl"
+                >info@iumi.cash</a>
+                <div class="flex justify-between phone:justify-center mt-2">
+                  <a href="#">
+                    <svg
+                      class="w-8 h-8 phone:w-12 phone:h-12"
+                      viewBox="0 0 31 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.6948 30C23.9834 30 30.7026 23.2843 30.7026 15C30.7026 6.71573 23.9834 0 15.6948 0C7.40624 0 0.687012 6.71573 0.687012 15C0.687012 23.2843 7.40624 30 15.6948 30Z"
+                        fill="#3B5998"
+                      />
+                      <path
+                        d="M19.5532 15.4236H16.8144V25.3403H12.6649V15.4236H10.6914V11.9384H12.6649V9.68313C12.6649 8.07036 13.44 5.54492 16.8514 5.54492L19.925 5.55763V8.94056H17.6949C17.3291 8.94056 16.8147 9.1212 16.8147 9.89054V11.9417H19.9157L19.5532 15.4236Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg
+                      class="w-8 h-8 phone:w-12 phone:h-12 phone:mx-2"
+                      viewBox="0 0 31 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20.1939 7.98047H11.2479C9.81994 7.98047 8.6582 9.14166 8.6582 10.5689V19.5108C8.6582 20.9381 9.81994 22.0996 11.2479 22.0996H20.1939C21.6219 22.0996 22.7839 20.9384 22.7839 19.5108V10.5689C22.7839 9.14166 21.6222 7.98047 20.1939 7.98047ZM15.7209 19.688C13.157 19.688 11.071 17.6029 11.071 15.0399C11.071 12.4772 13.157 10.3921 15.7209 10.3921C18.2851 10.3921 20.3712 12.4772 20.3712 15.0399C20.3712 17.6026 18.2848 19.688 15.7209 19.688ZM20.5207 11.3531C19.9137 11.3531 19.4201 10.8597 19.4201 10.2534C19.4201 9.64705 19.9137 9.15369 20.5207 9.15369C21.1273 9.15369 21.6209 9.64705 21.6209 10.2534C21.6209 10.8597 21.1273 11.3531 20.5207 11.3531Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M15.7204 12.3569C14.2403 12.3569 13.0352 13.5608 13.0352 15.04C13.0352 16.5199 14.2403 17.7241 15.7204 17.7241C17.2011 17.7241 18.4053 16.5199 18.4053 15.04C18.4053 13.5611 17.2008 12.3569 15.7204 12.3569Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M15.7207 0C7.43245 0 0.712891 6.71606 0.712891 15C0.712891 23.2839 7.43245 30 15.7207 30C24.009 30 30.7285 23.2839 30.7285 15C30.7285 6.71606 24.009 0 15.7207 0ZM24.7483 19.5111C24.7483 22.0215 22.7054 24.0634 20.1937 24.0634H11.2477C8.7363 24.0634 6.69307 22.0215 6.69307 19.5111V10.5698C6.69307 8.05967 8.7363 6.01751 11.2477 6.01751H20.1937C22.7054 6.01751 24.7483 8.05967 24.7483 10.5698V19.5111Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg
+                      class="w-8 h-8 phone:w-12 phone:h-12"
+                      viewBox="0 0 31 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.7471 30C24.0357 30 30.7549 23.2843 30.7549 15C30.7549 6.71573 24.0357 0 15.7471 0C7.45848 0 0.739258 6.71573 0.739258 15C0.739258 23.2843 7.45848 30 15.7471 30Z"
+                        fill="#007AB9"
+                      />
+                      <path
+                        d="M24.7148 16.2072V22.3916H21.1275V16.6217C21.1275 15.1729 20.6096 14.1835 19.3108 14.1835C18.3196 14.1835 17.7307 14.8496 17.4707 15.4946C17.3763 15.7251 17.3519 16.0452 17.3519 16.3684V22.3913H13.7643C13.7643 22.3913 13.8125 12.619 13.7643 11.6074H17.3522V13.1356C17.345 13.1476 17.3348 13.1594 17.3284 13.1709H17.3522V13.1356C17.8289 12.4024 18.6791 11.3542 20.5853 11.3542C22.9454 11.3542 24.7148 12.8955 24.7148 16.2072ZM10.0115 6.40918C8.7843 6.40918 7.98145 7.21432 7.98145 8.27215C7.98145 9.30751 8.76102 10.1359 9.96437 10.1359H9.98764C11.2389 10.1359 12.0169 9.30751 12.0169 8.27215C11.993 7.21432 11.2389 6.40918 10.0115 6.40918ZM8.19467 22.3916H11.7809V11.6074H8.19467V22.3916Z"
+                        fill="#F1F2F2"
+                      />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

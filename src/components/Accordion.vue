@@ -6,7 +6,7 @@
       :key="index"
     >
       <div class="flex justify-between items-center cursor-pointer" @click="toggleAcc(index)">
-        <p class="text-xl font-semibold">{{index+1}}. {{item.title}}</p>
+        <p class="text-xl phone:text-2xl font-semibold">{{index+1}}. {{item.title}}</p>
         <a>
           <svg
             v-if="!item.isActive"
@@ -48,7 +48,7 @@
       </div>
       <transition-expand>
         <div v-if="item.isActive" class="mt-6">
-          <p class="text-xl">{{item.value}}</p>
+          <p class="text-xl phone:text-2xl">{{item.value}}</p>
         </div>
       </transition-expand>
     </div>

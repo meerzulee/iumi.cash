@@ -1,13 +1,28 @@
 <template >
   <div class="flex icon-scroll items-center cursor-pointer">
-    <div class="cursor-pointer icon mr-2">
+    <div v-if="dark" class="cursor-pointer icon mr-2">
       <div class="mouse flex justify-center">
         <div class="wheel"></div>
       </div>
     </div>
-    <p class="text-xl text-jacksons_purple-200">Scroll down for more</p>
+    <div v-else class="cursor-pointer icon mr-2">
+      <div class="mousew mouse flex justify-center">
+        <div class="wheel wheelw"></div>
+      </div>
+    </div>
+    <p
+      class="text-xl text-jacksons_purple-200 phone:mt-1"
+      :class="[dark ? '' : 'phone:text-white']"
+    >Scroll down for more</p>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    dark: Boolean
+  }
+};
+</script>
 <style scoped >
 .icon-scroll {
   position: absolute;
@@ -19,38 +34,12 @@
   z-index: 99999;
 }
 
-.icon-arrows::after,
-.icon-arrows::before {
-  content: "";
-}
-.icon-arrows span,
-.icon-arrows::after,
-.icon-arrows::before {
-  display: block;
-  width: 0.315em;
-  height: 0.315em;
-  border-right: 1px solid #323790;
-  border-bottom: 1px solid #323790;
-  margin: 0 0 0.125em 0.315em;
-  transform: rotate(45deg);
-  animation: mouse-scroll 1s infinite;
-  animation-direction: alternate;
-}
-.icon-arrows::before {
-  margin-top: 0.315em;
-  animation-delay: 0.1s;
-}
-
 .icon-scroll span {
   animation-delay: 0.2s;
 }
 
-.icon-arrows::after {
-  animation-delay: 0.3s;
-}
-
 .icon-scroll .mouse {
-  height: 1.375em;
+  height: 1.275em;
   width: 0.875em;
   border: 1px solid #323790;
   border-radius: 2em;
@@ -61,10 +50,27 @@
   display: block;
   height: 0.19em;
   width: 0.187em;
-  margin: 0.19em auto 0.1875em;
+  margin: 0.19em auto 0.1875em auto;
   background: #323790;
   animation: mouse-wheel 1.2s ease infinite;
   border-radius: 25px;
+}
+@screen phone {
+  .icon-scroll .mouse {
+    height: 1.5em;
+    width: 1em;
+  }
+  .icon-scroll .mousew {
+    border: 1px solid #fff;
+  }
+  .icon-scroll .wheel {
+    height: 0.2em;
+    width: 0.17em;
+    padding-left: 0.1em;
+  }
+  .icon-scroll .wheelw {
+    background: #fff;
+  }
 }
 
 @keyframes mouse-wheel {
