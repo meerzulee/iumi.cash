@@ -35,7 +35,12 @@ body {
 	}
 }
 
-@screen tablet-port {
+@screen phone {
+	html {
+		font-size: 70.5%;
+	}
+}
+@screen iphone {
 	html {
 		font-size: 50%;
 	}

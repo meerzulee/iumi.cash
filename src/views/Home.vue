@@ -131,7 +131,9 @@
         <div class="flex w-full h-full tablet-port:px-20 phone:mt-1">
           <!-- img -->
           <div class="flex flex-row phone:w-full phone:flex-col mt-24 tablet:mt-12">
-            <div class="max-w-xs phone:max-w-full phone:px-21 w-full px-3 -ml-3 mr-4 phone:z-10">
+            <div
+              class="max-w-xs phone:max-w-full phone:px-21 w-full px-3 -ml-3 mr-4 phone:mx-0 phone:z-10"
+            >
               <div class="flex flex-col items-center rounded-card bg-white w-full card-shadow">
                 <div
                   class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-28 px-24"
@@ -149,7 +151,7 @@
                 >Get started</a>
               </div>
             </div>
-            <div class="max-w-xs phone:max-w-full phone:px-18 w-full px-3 mt-20 phone:z-10">
+            <div class="max-w-xs phone:max-w-full phone:px-21 w-full px-3 mt-20 phone:z-10">
               <div class="flex flex-col items-center rounded-card bg-white w-full card-shadow">
                 <div
                   class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-28 px-16 phone:pb-2 phone:px-0"
@@ -190,7 +192,7 @@
           <div>
             <img src="../assets/images/phone3.png" class="w-phone h-full phone:hidden" alt />
           </div>
-          <div class="max-w-2xl w-full pt-4 phone:mx-auto iphone:px-10">
+          <div class="max-w-2xl w-full pt-4 phone:mx-auto phone:px-8">
             <!-- accordion -->
             <Accordion />
             <!-- /accordion -->
