@@ -1,16 +1,16 @@
 <template>
   <div>
     <div
-      class="mt-10 flex flex-col p-5 w-full rounded-semi-card border border-jacksons_purple-200"
+      class="mt-10 flex flex-col p-8 w-full rounded-semi-card border-2 border-jp-200"
       v-for="(item, index) in accordiodItems"
       :key="index"
     >
       <div class="flex justify-between items-center cursor-pointer" @click="toggleAcc(index)">
-        <p class="text-xl phone:text-2xl iphone:text-xl font-semibold">{{index+1}}. {{item.title}}</p>
+        <p class="text-5lg font-semibold">{{index+1}}. {{item.title}}</p>
         <a>
           <svg
             v-if="!item.isActive"
-            class="h-8 w-8"
+            class="h-16 w-16"
             viewBox="0 0 40 42"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@
           </svg>
           <svg
             v-else
-            class="h-8 w-8"
+            class="h-16 w-16"
             viewBox="0 0 40 42"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@
       </div>
       <transition-expand>
         <div v-if="item.isActive" class="mt-6">
-          <p class="text-xl phone:text-xl">{{item.value}}</p>
+          <p class="text-5lg">{{item.value}}</p>
         </div>
       </transition-expand>
     </div>

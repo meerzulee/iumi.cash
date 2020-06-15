@@ -1,54 +1,56 @@
 <template>
   <div class="home">
     <!-- header -->
-    <div class="bg-ghost-white h-screen relative phone:overflow-hidden" id="home">
+    <div
+      class="bg-light phone:h-screen tab-land:h-auto h-screen relative phone:overflow-hidden"
+      id="home"
+    >
       <img
         src="../assets/images/shape1.png"
-        class="absolute tablet:max-w-xl max-w-2xl top-0 right-0 z-10 phone:hidden"
+        class="absolute w-35vw top-0 right-0 z-0 phone:hidden"
         alt
       />
-      <div class="container mx-auto flex flex-col pt-32 phone:h-full">
-        <div
-          class="flex justify-between tablet-port:justify-around mt-1 phone:relative phone:h-full"
-        >
-          <div class="flex flex-col mt-32 pt-10 phone:ml-0 tablet:ml-16">
-            <h1 class="text-5xl font-bold text-jacksons_purple-200 leading-tight text-center">
+      <div class="container mx-auto flex flex-col pt-32 tab-land:pb-32">
+        <div class="flex justify-between phone:justify-center phone:p-0 mt-20 pl-32 desktop:pt-20">
+          <div class="flex flex-col pt-10 mt-52 phone:mt-16 phone:ml-0 tablet:ml-16">
+            <h1
+              class="text-6xl tab-mini:text-6lg phone:text-6xl font-bold text-jp-200 leading-tight phone:text-center"
+            >
               Quick, easy and secure
               <br />next generation e-wallet
               <br />for your smart phone
             </h1>
-            <div class="flex mt-10 phone:mt-20 items-center phone:justify-around">
+            <div class="flex mt-20 phone:justify-center items-center">
               <a
                 href="#"
-                class="mr-5 flex text-lg phone:text-2xl font-bold bg-gradient items-center text-white py-3 px-4 phone:px-8 rounded-full"
+                class="mr-5 flex inline-block text-4xl phone:text-5lg font-bold bg-gradient items-center text-white py-6 px-9 phone:py-5 phone:px-8 rounded-full"
               >
-                <img
-                  src="../assets/images/apple.svg"
-                  alt
-                  class="h-6 w-6 phone:h-8 phone:w-8 mb-2 mr-3"
-                />App Store
+                <img src="../assets/images/apple.svg" alt class="w-10 mr-7" />App Store
               </a>
 
               <a
                 href="#"
-                class="flex text-lg phone:text-2xl phone:text-xl font-bold border-2 border-jacksons_purple-100 items-center text-jacksons_purple-200 py-3 px-4 phone:px-8 rounded-full"
+                class="mr-5 flex items-center inline-block text-4xl phone:text-5lg font-bold bg-transparent items-center py-6 px-9 phone:py-4 phone:px-8 rounded-full border-2 border-jp-100 text-jp-200 rounded-full"
               >
-                <img
-                  src="../assets/images/google-play.svg"
-                  alt
-                  class="h-6 w-6 phone:h-8 phone:w-8 mr-3"
-                />Play Store
+                <img src="../assets/images/google-play.svg" alt class="w-10 phone:w-12 mr-7" />Play Store
               </a>
             </div>
           </div>
           <img
             src="../assets/images/phone1.png"
-            class="z-20 w-phone h-full phone:absolute phone:h-auto iphone:w-9/12 phone:w-10/12 phone:z-0 iphone:-bottom-60 phone:-bottom-60"
+            class="w-128 h-auto z-10 tab-mini:mx-10 phone:hidden tab-port:mx-32"
             alt
           />
         </div>
       </div>
-      <div class="absolute bottom-0 w-full flex justify-center mb-12 phone:mb-28 iphone:mb-12">
+      <div class="w-full absolute phone-bottom min-phone: flex justify-center">
+        <img
+          src="../assets/images/phone1.png"
+          class="max-w-4xl min-phone:px-20 h-auto z-10 phone-up:hidden"
+          alt
+        />
+      </div>
+      <div class="absolute bottom-0 w-full flex justify-center tab-port:mb-32 mb-64">
         <ScrollIcon
           v-scroll-to="{el: '#features',
          duration: 1100,
@@ -56,55 +58,49 @@
         />
       </div>
     </div>
-    <div class="h-screen pt-12 phone:overflow-hidden relative" id="features">
-      <div class="container mx-auto flex flex-col phone:h-full items-center tablet:mt-4 mt-10">
-        <h1
-          class="text-4xl phone:text-3xl font-bold text-jacksons_purple-100 mt-2 phone:mt-10"
-        >App Feature</h1>
-        <p class="text-3xl phone:font-semibold text-center mt-5 z-30 phone:text-2xl">
+    <div
+      class="h-screen tab-land:h-auto tab-land:pb-32 pt-32 overflow-hidden relative"
+      id="features"
+    >
+      <div class="container mx-auto flex flex-col phone:h-full items-center mt-4">
+        <h1 class="text-6xl phone:text-5xl font-bold text-jp-100">App Feature</h1>
+        <p class="text-5xl phone:text-5lg text-center leading-snug mt-5 z-30">
           Just needs an internet connection via 3/4G,
           <br class="phone-up:hidden" />LTE, WiFi or satellite.
           <br class="phone:hidden" />Safe, secure blockchain
           <br class="phone-up:hidden" />solution to protect your money
         </p>
         <!-- 6.5rem -->
-        <div
-          class="mt-10 phone:mt-20 flex w-full phone:h-full phone:relative justify-between tablet-port:justify-around z-30"
-        >
+        <div class="mt-24 flex w-full justify-between">
           <img
             src="../assets/images/phone2.png"
-            class="w-phone h-full phone:absolute phone:hidden"
+            class="w-128 h-auto phone:hidden tab-port:mx-24 mr-32"
             alt
           />
-          <div class="flex flex-col max-w-3xl px-20 phone:px-15">
-            <!-- hover cards -->
-            <div
-              class="group hover-card"
-              :class=" index !=0 ? 'mt-10' : ''"
-              v-for="(item, index) in cards"
-              :key="index"
-            >
-              <!-- svg -->
-              <div class="h-12 phone:h-20 mr-10">
-                <svg
-                  class="h-12 phone:h-20 group-hover:text-jacksons_purple-200 fill-current"
-                  viewBox="0 0 119 119"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  v-html="item.svg"
-                />
-              </div>
-              <div class="flex flex-col">
-                <h3
-                  class="text-xl phone:text-3xl text-jacksons_purple-200 font-semibold"
-                >{{item.title}}</h3>
-                <p class="text-lg phone:text-xl font-semibold">{{item.desc}}</p>
+          <div class="flex flex-1 justify-center">
+            <div class="flex flex-col max-w-5lg items-center phone:w-full phone:mx-16">
+              <!-- hover cards -->
+              <div class="group hover-card" v-for="(item, index) in cards" :key="index">
+                <!-- svg -->
+                <div class="mr-8">
+                  <svg
+                    class="w-32 h-32 phone:w-28 phone:h-28 group-hover:text-jp-200 fill-current"
+                    viewBox="0 0 119 119"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    v-html="item.svg"
+                  />
+                </div>
+                <div class="flex flex-col flex-1">
+                  <h3 class="text-5lg phone:text-5xl text-jp-200 font-semibold">{{item.title}}</h3>
+                  <p class="text-4xl phone:text-4lg font-semibold">{{item.desc}}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="absolute bottom-0 w-full flex justify-center mb-12">
+      <div class="absolute bottom-0 phone:hidden w-full flex justify-center mb-8">
         <ScrollIcon
           v-scroll-to="{el: '#pricing',
          duration: 1100,
@@ -113,86 +109,82 @@
         />
       </div>
     </div>
-    <div
-      class="h-screen phone:h-auto bg-ghost-white tablet:pt-4 pt-12 overflow-hidden"
-      id="pricing"
-    >
+    <div class="h-screen tab-land:h-auto phone:pt-20 pt-32 bg-light overflow-hidden" id="pricing">
       <div
-        class="container mx-auto flex flex-col items-center tablet:mt-4 mt-10 h-full phone:pb-16 relative"
+        class="container mx-auto flex flex-col tab-land:pb-32 items-center mt-10 h-full relative"
       >
-        <h1
-          class="text-4xl phone:text-3xl font-bold text-jacksons_purple-100 mt-2 phone:mt-10"
-        >Pricing</h1>
-        <p class="text-3xl phone:text-2xl text-center font-semibold tablet-port:mt-2 mt-5">
+        <h1 class="text-6xl phone:text-5lg font-bold text-jp-100 mt-4">Pricing</h1>
+        <p class="text-5xl phone:text-4xl text-center mt-5">
           No cost for the App.
           No monthly
           <br class="phone-up:hidden" />account keeping fees.
         </p>
-        <div class="flex w-full h-full tablet-port:px-20 phone:mt-1">
-          <!-- img -->
-          <div class="flex flex-row phone:w-full phone:flex-col mt-24 tablet:mt-12">
-            <div
-              class="max-w-xs phone:max-w-full phone:px-21 w-full px-3 -ml-3 mr-4 phone:mx-0 phone:z-10"
-            >
-              <div class="flex flex-col items-center rounded-card bg-white w-full card-shadow">
+        <div class="flex w-full h-full tab-land:mt-32 phone:mt-14 phone:p-0 pl-24">
+          <div class="flex mt-24 phone:mt-0 phone:flex-col phone:items-center justify-start w-full">
+            <div class="max-w-md h-auto w-full phone:z-10">
+              <div
+                class="flex flex-col h-auto items-center justify-between rounded-card bg-white w-full card-shadow phone:max-h-lg phone:min-h-full"
+              >
                 <div
-                  class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-28 px-24"
+                  class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-48 phone:h-40"
                 >
-                  <h3 class="text-xl phone:text-2xl font-semibold text-white phone:mt-2">Basic</h3>
+                  <h3 class="text-5lg font-bold text-white mt-10">Basic</h3>
                 </div>
-                <p class="text-xl phone:text-2xl text-center my-10">
+                <p class="text-5lg phone:text-4xl text-center px-9 mt-18 leading-tight">
                   Flat 1% fee
-                  on all transfers,
+                  <br class="phone:hidden" />on all transfers,
                   <br />paid by the sender.
                 </p>
                 <a
                   href="#"
-                  class="mb-12 px-4 phone:px-7 py-1 bg-gradient w-auto text-white rounded-full text-xl phone:text-2xl card-shadow"
+                  class="my-24 phone:my-10 px-7 py-2 bg-gradient w-auto text-white rounded-full phone:text-4xl text-5lg card-shadow"
                 >Get started</a>
               </div>
             </div>
-            <div class="max-w-xs phone:max-w-full phone:px-21 w-full px-3 mt-20 phone:z-10">
-              <div class="flex flex-col items-center rounded-card bg-white w-full card-shadow">
+            <div class="max-w-md w-full phone:ml-0 ml-12 phone:mt-24 mt-36 phone:z-10">
+              <div
+                class="flex flex-col h-auto items-center justify-between rounded-card bg-white w-full card-shadow phone:max-h-lg phone:min-h-full"
+              >
                 <div
-                  class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-28 px-16 phone:pb-2 phone:px-0"
+                  class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-48 phone:h-40"
                 >
-                  <h3 class="text-xl phone:text-2xl font-semibold mt-5 text-center text-white">
+                  <h3 class="text-5lg font-bold phone:mb-8 text-white mt-10 text-center">
                     High Volume
                     <br class="phone-up:hidden" />Business Customers
                   </h3>
                 </div>
-                <p class="text-xl phone:text-2xl text-center my-10">
+                <p class="text-5lg phone:text-4xl phone:mt-12 text-center px-9 mt-18 leading-tight">
                   Contact us
                   <br />info@iumi.cash
                   <br />for volume discounts
                 </p>
                 <a
                   href="#"
-                  class="mb-12 px-4 phone:px-7 py-1 bg-gradient w-auto text-white rounded-full text-xl phone:text-2xl card-shadow"
+                  class="my-24 phone:my-10 px-7 py-2 bg-gradient w-auto text-white rounded-full text-5lg phone:text-4xl card-shadow"
                 >Get started</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="absolute bottom-0 -right-1/4 phone:pr-0 tablet-port:pr-20">
+        <div class="absolute bottom-0 right-0">
           <img
             src="../assets/images/girl.png"
-            class="max-w-xl px-10 phone:px-0 phone:max-w-xl tablet:max-w-lg phone:pl-3"
+            class="max-w-5xl laptop:px-32 phone:px-0 phone:max-w-6lg phone:-mr-48 tab-port:max-w-4xl px-10 -mr-24"
             alt
           />
         </div>
       </div>
     </div>
-    <div class="h-screen phone:h-auto phone:pb-32 tablet:pt-8 pt-12 h-full" id="faqs">
+    <div class="h-screen tab-land:h-auto pt-32" id="faqs">
       <div class="container mx-auto flex flex-col items-center pt-10 h-full">
-        <h1
-          class="text-4xl phone:text-3xl font-bold text-jacksons_purple-100 mt-2"
-        >Frequently Asked Questions</h1>
-        <div class="flex justify-between tablet-port:justify-around w-full tablet:mt-8 mt-24">
+        <h1 class="text-6xl font-bold text-jp-100 mt-6">Frequently Asked Questions</h1>
+        <div
+          class="flex justify-between tablet-port:justify-around w-full phone:px-8 tab-port:px-24 mt-24"
+        >
           <div>
-            <img src="../assets/images/phone3.png" class="w-phone h-full phone:hidden" alt />
+            <img src="../assets/images/phone3.png" class="w-128 h-auto phone:hidden" alt />
           </div>
-          <div class="max-w-2xl w-full pt-4 phone:mx-auto phone:px-8">
+          <div class="flex-1 tab-port:ml-20 tab-land:ml-32 phone:ml-0 ml-80 w-full">
             <!-- accordion -->
             <Accordion />
             <!-- /accordion -->
@@ -201,53 +193,41 @@
       </div>
     </div>
     <div
-      class="min-h-screen phone:max-h-full pt-12 h-full relative flex justify-center items-start bg-ghost-white pt-7"
+      class="h-screen tab-land:h-auto tab-land:py-40 w-full relative flex justify-center items-center bg-light"
       id="contacts"
     >
-      <img
-        src="../assets/images/shape2.png"
-        class="absolute max-w-2xl phone:max-w-xs top-0 left-0 h-full z-0 iphone:hidden"
-        alt
-      />
-
       <div
-        class="max-w-7xl bg-red-700 w-full tablet-port:mt-20 mt-40 z-10 rounded-semi-card overflow-hidden flex flex-col"
+        class="max-w-10xl tab-port:w-full tab-port:mx-36 phone:mx-0 w-full z-10 rounded-semi-card overflow-hidden flex flex-col"
       >
-        <div class="flex w-full bg-white phone:flex-col">
-          <div
-            class="w-1/2 phone:w-full phone:px-20 tablet-port:w-2/3 tablet-port:px-10 tablet-port:items-center px-18 py-10 flex flex-col"
-          >
-            <h1 class="text-5xl font-bold text-jacksons_purple-200">Contact Us</h1>
-            <div
-              class="mt-6 flex justify-between phone:justify-start phone:flex-col tablet-port:w-full"
-            >
+        <div class="flex w-full h-full bg-white tab-port:flex-col">
+          <div class="w-1/2 tab-port:w-full px-28 phone:px-16 py-18 flex flex-col">
+            <h1 class="text-6xl font-bold text-jp-200">Contact Us</h1>
+            <div class="mt-6 flex phone:flex-col justify-between mr-8">
               <input type="text" class="footer-input" placeholder="First Name" />
               <input type="text" class="footer-input" placeholder="Last Name" />
             </div>
-            <div class="mt-12 phone:mt-4 flex justify-between phone:flex-col tablet-port:w-full">
+            <div class="mt-12 phone:mt-0 flex phone:flex-col justify-between mr-8">
               <input type="text" class="footer-input" placeholder="Email" />
               <input type="text" class="footer-input" placeholder="Phone" />
             </div>
-            <div
-              class="mt-12 phone:mt-4 flex flex-col phone:items-center tablet-port:w-full items-start justify-start"
-            >
+            <div class="mt-12 flex flex-col phone:items-center items-start justify-start">
               <textarea
                 type="text"
-                class="footer-input w-2/3 phone:w-full focus:outline-none"
+                class="footer-input w-2/3 tab-port:w-1/2 phone:w-full focus:outline-none"
                 placeholder="Message"
                 rows="3"
               />
 
               <a
                 href="#"
-                class="mt-8 phone:mt-12 w-auto rounded-full py-2 text-white px-5 bg-gradient font-medium text-xl phone:text-3xl"
+                class="mt-12 phone:mt-16 w-auto rounded-full py-4 px-16 text-white bg-gradient font-medium text-4xl"
               >Submit now</a>
             </div>
           </div>
-          <div class="w-1/2 phone:w-full">
+          <div class="w-1/2 tab-port:w-full min-h-full tab-port:h-128 phone:max-h-xl">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125947.28655873938!2d159.90324947461454!3d-9.434314977607366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6f285b8f3406a2bb%3A0x43fa3daff6ec04dc!2sHoniara%2C%20Solomon%20Islands!5e0!3m2!1sen!2skg!4v1591094396881!5m2!1sen!2skg"
-              class="h-full w-full phone:h-map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3935.893598294081!2d159.9547363153973!3d-9.43073170132311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6f285c78449b0bb7%3A0x476d8f151d3d1140!2sY.Sato%20Marine!5e0!3m2!1sen!2skg!4v1592199246533!5m2!1sen!2skg"
+              class="h-full w-full"
               frameborder="0"
               style="border:0;"
               aria-hidden="false"
@@ -255,21 +235,19 @@
             ></iframe>
           </div>
         </div>
-        <div class="footer-gradient w-full flex flex-col pt-12 pb-8 px-40 phone:px-20 items-center">
-          <h1
-            class="text-3xl phone:text-4xl text-white font-bold text-center ml-5"
-          >Stay Connect With US</h1>
+        <div class="footer-gradient w-full flex flex-col px-40 items-center">
+          <h1 class="text-5xl text-white font-bold text-center mt-22">Stay Connect With US</h1>
 
-          <div class="flex justify-between phone:flex-col text-white w-full phone:mt-6">
+          <div class="flex phone:flex-col justify-between text-white w-full mt-8 mb-22">
             <div class="flex flex-col">
               <a
                 href="#"
-                class="font-semibold text-lg phone:text-center phone:mt-2 phone:text-2xl"
+                class="font-semibold text-4lg phone:text-center phone:mt-2 phone:text-5lg"
               >info@iumi.cash</a>
               <div class="flex justify-between phone:justify-center mt-2">
                 <a href="#">
                   <svg
-                    class="w-8 h-8 phone:w-12 phone:h-12"
+                    class="w-12 h-12 phone:w-18 phone:h-18"
                     viewBox="0 0 31 30"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -286,7 +264,7 @@
                 </a>
                 <a href="#">
                   <svg
-                    class="w-8 h-8 phone:w-12 phone:h-12 phone:mx-2"
+                    class="w-12 h-12 phone:w-18 phone:h-18 phone:mx-3"
                     viewBox="0 0 31 30"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -307,7 +285,7 @@
                 </a>
                 <a href="#">
                   <svg
-                    class="w-8 h-8 phone:w-12 phone:h-12"
+                    class="w-12 h-12 phone:w-18 phone:h-18"
                     viewBox="0 0 31 30"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -324,27 +302,22 @@
                 </a>
               </div>
             </div>
-
-            <div class="flex phone:flex-col my-4">
-              <div class="phone:my-8 phone:flex phone:flex-col items-center">
-                <p class="font-bold text-lg phone:text-2xl">Address:</p>
-                <p class="text-lg phone:text-2xl text-center mt-2">
-                  C/- Baoro and Associates,
-                  <br class="phone:hidden" />Top Floor, Ysato Building,
-                  <br class="phone:hidden" />Commonwealth Street, Honiara.
-                </p>
-              </div>
-              <div class="flex flex-col phone:flex-row phone:justify-around">
-                <a href="#" class="font-semibold text-lg phone:text-2xl">Term & Conditions</a>
-                <a
-                  href="#"
-                  class="font-semibold text-lg phone:text-2xl phone:mt-0 mt-4"
-                >Privacy Policy</a>
-              </div>
+            <div class="flex flex-col items-center phone:mt-14">
+              <p class="font-bold text-4lg phone:text-4xl text-center">Address:</p>
+              <p class="text-4lg phone:text-4xl text-center mt-2">
+                C/- Baoro and Associates,
+                <br class="phone:hidden" />Top Floor, Ysato Building,
+                <br class="phone:hidden" />Commonwealth Street, Honiara.
+              </p>
+            </div>
+            <div class="flex flex-col phone:flex-row justify-between phone:mt-14">
+              <a href="#" class="font-semibold text-4lg">Term & Conditions</a>
+              <a href="#" class="font-semibold text-4lg mt-4">Privacy Policy</a>
             </div>
           </div>
         </div>
       </div>
+      <img src="../assets/images/shape2.png" class="absolute w-30vw top-0 left-0 h-full z-0" alt />
     </div>
   </div>
 </template>

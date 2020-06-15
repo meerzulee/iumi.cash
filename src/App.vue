@@ -1,15 +1,17 @@
 <template>
   <div id="app" class="relative">
     <div id="nav" class="w-screen fixed navbar z-50">
-      <div class="container mx-auto flex justify-between py-4">
-        <div class="pointer tablet-port:ml-10">
+      <div
+        class="container mx-auto flex justify-between tab-port:mx-32 phone:mx-18 items-center phone:py-6 py-8"
+      >
+        <div class>
           <a
             class="cursor-pointer"
             v-scroll-to="{el: '#home',
          duration: 1100,
          easing: 'ease-in-out'}"
           >
-            <img src="./assets/images/logo-header.png" class="h-12" alt />
+            <img src="./assets/images/logo-header.png" class="h-16" alt />
           </a>
         </div>
         <!-- linkss -->
@@ -50,7 +52,7 @@
         <!-- cta -->
         <div class="flex items-center phone-up:hidden">
           <a
-            class="cursor-pointer text-3xl font-bold text-jacksons_purple-200 mt-1"
+            class="cursor-pointer text-5lg font-bold text-jp-200 mt-1"
             v-scroll-to="{el: '#home',
          duration: 1100,
          easing: 'ease-in-out'}"
@@ -58,7 +60,7 @@
         </div>
         <a
           href="#"
-          class="mr-10 bg-transparent border-jacksons_purple-200 rounded-full border-2 phone:border text-lg uppercase text-jacksons_purple-200 font-semibold px-5 py-1 flex items-center hover:border-transparent hover:text-white hover:bg-jacksons_purple-200 phone:font-bold"
+          class="mr-10 phone:mr-0 bg-transparent border-jp-200 rounded-full border-2 text-3xl text-jp-200 uppercase font-bold px-8 py-2 leading-relaxed flex items-center hover:border-transparent hover:text-white hover:bg-jp-200 phone:font-bold"
         >get the app</a>
       </div>
     </div>
