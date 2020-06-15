@@ -48,7 +48,9 @@ module.exports = {
 				'-1/4': '-25%',
 				'1/4': '25%',
 				'-15': '-15%',
-				'-60': '-60%'
+				'-60': '-60%',
+				'-phone': '-48rem',
+				'-iphone': '-40rem',
 			},
 
 			screens: {
@@ -85,6 +87,10 @@ module.exports = {
 				},
 				iphone: {
 					max: '450px'
+				},
+				'iphone-only': {
+					min: '300px',
+					max: '321px'
 				}
 			}
 		}
@@ -107,7 +113,7 @@ module.exports = {
 						maxWidth: '1180px'
 					},
 					'@screen desktop': {
-						maxWidth: '1180px'
+						maxWidth: '1000px'
 					},
 					'@screen big-laptop': {
 						maxWidth: '1000px'

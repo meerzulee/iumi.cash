@@ -11,8 +11,8 @@
         <div
           class="flex justify-between tablet-port:justify-around mt-1 phone:relative phone:h-full"
         >
-          <div class="flex flex-col mt-32 pt-10 phone:ml-0 tablet:ml-16">
-            <h1 class="text-5xl font-bold text-jacksons_purple-200 leading-tight text-center">
+          <div class="flex flex-col mt-32 phone:mt-20 pt-10 phone:ml-0 tablet:ml-16">
+            <h1 class="text-5xl font-bold text-jacksons_purple-200 leading-tight phone:text-center">
               Quick, easy and secure
               <br />next generation e-wallet
               <br />for your smart phone
@@ -25,7 +25,7 @@
                 <img
                   src="../assets/images/apple.svg"
                   alt
-                  class="h-6 w-6 phone:h-8 phone:w-8 mb-2 mr-3"
+                  class="h-6 w-6 phone:h-8 phone:w-8 mb-1 mr-3"
                 />App Store
               </a>
 
@@ -43,7 +43,7 @@
           </div>
           <img
             src="../assets/images/phone1.png"
-            class="z-20 w-phone h-full phone:absolute phone:h-auto iphone:w-9/12 phone:w-10/12 phone:z-0 iphone:-bottom-60 phone:-bottom-60"
+            class="z-20 w-phone h-full phone:absolute phone:h-auto iphone:w-9/12 phone:w-10/12 phone:z-0 iphone:-bottom-phone phone:-bottom-60 iphone-only:-bottom-iphone"
             alt
           />
         </div>
@@ -174,7 +174,7 @@
             </div>
           </div>
         </div>
-        <div class="absolute bottom-0 -right-1/4 phone:pr-0 tablet-port:pr-20">
+        <div class="absolute bottom-0 right-0 phone:-right-1/4 phone:pr-0 tablet-port:pr-20">
           <img
             src="../assets/images/girl.png"
             class="max-w-xl px-10 phone:px-0 phone:max-w-xl tablet:max-w-lg phone:pl-3"
@@ -256,9 +256,7 @@
           </div>
         </div>
         <div class="footer-gradient w-full flex flex-col pt-12 pb-8 px-40 phone:px-20 items-center">
-          <h1
-            class="text-3xl phone:text-4xl text-white font-bold text-center ml-5"
-          >Stay Connect With US</h1>
+          <h1 class="text-3xl phone:text-4xl text-white font-bold text-center">Stay Connect With US</h1>
 
           <div class="flex justify-between phone:flex-col text-white w-full phone:mt-6">
             <div class="flex flex-col">
@@ -325,22 +323,20 @@
               </div>
             </div>
 
-            <div class="flex phone:flex-col my-4">
-              <div class="phone:my-8 phone:flex phone:flex-col items-center">
-                <p class="font-bold text-lg phone:text-2xl">Address:</p>
-                <p class="text-lg phone:text-2xl text-center mt-2">
-                  C/- Baoro and Associates,
-                  <br class="phone:hidden" />Top Floor, Ysato Building,
-                  <br class="phone:hidden" />Commonwealth Street, Honiara.
-                </p>
-              </div>
-              <div class="flex flex-col phone:flex-row phone:justify-around">
-                <a href="#" class="font-semibold text-lg phone:text-2xl">Term & Conditions</a>
-                <a
-                  href="#"
-                  class="font-semibold text-lg phone:text-2xl phone:mt-0 mt-4"
-                >Privacy Policy</a>
-              </div>
+            <div class="phone:my-8 phone:flex phone:flex-col items-center">
+              <p class="font-bold text-lg phone:text-2xl text-center">Address:</p>
+              <p class="text-lg phone:text-2xl text-center mt-2">
+                C/- Baoro and Associates,
+                <br class="phone:hidden" />Top Floor, Ysato Building,
+                <br class="phone:hidden" />Commonwealth Street, Honiara.
+              </p>
+            </div>
+            <div class="flex flex-col phone:flex-row phone:justify-around">
+              <a href="#" class="font-semibold text-lg phone:text-2xl">Term & Conditions</a>
+              <a
+                href="#"
+                class="font-semibold text-lg phone:text-2xl phone:mt-0 mt-4"
+              >Privacy Policy</a>
             </div>
           </div>
         </div>
