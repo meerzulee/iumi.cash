@@ -11,7 +11,11 @@
          duration: 1100,
          easing: 'ease-in-out'}"
           >
-            <img src="./assets/images/logo-header.png" class="h-16" alt />
+            <img
+              src="https://iumi.cash/wp-content/uploads/2020/06/logo-header.png"
+              class="h-16"
+              alt
+            />
           </a>
         </div>
         <!-- linkss -->

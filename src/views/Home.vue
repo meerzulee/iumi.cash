@@ -6,7 +6,7 @@
       id="home"
     >
       <img
-        src="../assets/images/shape1.png"
+        src="https://iumi.cash/wp-content/uploads/2020/06/shape1.png"
         class="absolute w-35vw top-0 right-0 z-0 phone:hidden"
         alt
       />
@@ -25,19 +25,53 @@
                 href="#"
                 class="mr-5 flex inline-block text-4xl phone:text-5lg font-bold bg-gradient items-center text-white py-6 px-9 phone:py-5 phone:px-8 rounded-full"
               >
-                <img src="../assets/images/apple.svg" alt class="w-10 mr-7" />App Store
+                <svg
+                  viewBox="0 0 26 30"
+                  fill="none"
+                  class="w-10 mr-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24.7339 22.8223C24.2848 23.8454 23.7533 24.7872 23.1374 25.6531C22.2979 26.8335 21.6105 27.6506 21.0808 28.1043C20.2596 28.8491 19.3797 29.2305 18.4376 29.2522C17.7612 29.2522 16.9455 29.0624 15.996 28.6774C15.0434 28.2941 14.168 28.1043 13.3675 28.1043C12.528 28.1043 11.6276 28.2941 10.6646 28.6774C9.70007 29.0624 8.92306 29.2631 8.32899 29.2829C7.4255 29.3209 6.52495 28.9286 5.62605 28.1043C5.05233 27.6108 4.33471 26.7648 3.47504 25.5663C2.55267 24.2865 1.79436 22.8024 1.20029 21.1104C0.564058 19.2828 0.245117 17.5131 0.245117 15.7998C0.245117 13.8371 0.675138 12.1444 1.53646 10.7259C2.21339 9.58654 3.11394 8.68776 4.24104 8.02795C5.36815 7.36815 6.58599 7.03192 7.8975 7.01041C8.61512 7.01041 9.55618 7.22932 10.7256 7.65955C11.8918 8.09122 12.6406 8.31013 12.9688 8.31013C13.2143 8.31013 14.0461 8.05416 15.4562 7.54385C16.7897 7.0706 17.9152 6.87465 18.8372 6.95184C21.3355 7.15068 23.2125 8.12195 24.4608 9.8718C22.2264 11.207 21.1211 13.077 21.1431 15.476C21.1632 17.3446 21.8506 18.8996 23.2015 20.1342C23.8138 20.7073 24.4975 21.1502 25.2581 21.4647C25.0932 21.9365 24.919 22.3884 24.7339 22.8223ZM19.004 0.585876C19.004 2.05048 18.4614 3.41798 17.3799 4.68373C16.0749 6.18845 14.4963 7.05795 12.7844 6.92074C12.7626 6.74504 12.75 6.56011 12.75 6.36578C12.75 4.95976 13.3706 3.45504 14.4728 2.22473C15.0231 1.6018 15.7229 1.08384 16.5716 0.670656C17.4184 0.263636 18.2195 0.0385458 18.9728 0C18.9948 0.195795 19.004 0.391603 19.004 0.585857V0.585876Z"
+                    fill="white"
+                  />
+                </svg>
+                App Store
               </a>
 
               <a
                 href="#"
                 class="mr-5 flex items-center inline-block text-4xl phone:text-5lg font-bold bg-transparent items-center py-6 px-9 phone:py-4 phone:px-8 rounded-full border-2 border-jp-100 text-jp-200 rounded-full"
               >
-                <img src="../assets/images/google-play.svg" alt class="w-10 phone:w-12 mr-7" />Play Store
+                <svg
+                  viewBox="0 0 33 33"
+                  class="w-10 phone:w-12 mr-7"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M25.5494 12.4377L22.8022 10.791L19.4917 15.0077L22.8653 19.3116L25.5481 17.7045C26.6683 17.0344 27.2828 16.096 27.2828 15.069C27.2828 14.0421 26.6696 13.1091 25.5494 12.4377Z"
+                    fill="#2D3494"
+                  />
+                  <path
+                    d="M7.75032 27.8069L17.7975 15.0096L7.8777 2.3513C7.84619 2.34994 7.81336 2.33496 7.78184 2.33496C6.2546 2.33496 5.229 3.62204 5.229 5.53972V24.6076C5.23163 26.5075 6.2441 27.7878 7.75032 27.8069Z"
+                    fill="#2D3494"
+                  />
+                  <path
+                    d="M21.6482 10.1038L10.3442 3.33203L18.6462 13.9269L21.6482 10.1038Z"
+                    fill="#2D3494"
+                  />
+                  <path
+                    d="M18.6443 16.0859L10.123 26.9424L21.7119 20.0003L18.6443 16.0859Z"
+                    fill="#2D3494"
+                  />
+                </svg>
+                Play Store
               </a>
             </div>
           </div>
           <img
-            src="../assets/images/phone1.png"
+            src="https://iumi.cash/wp-content/uploads/2020/06/phone1.png"
             class="w-128 h-auto z-10 tab-mini:mx-10 phone:hidden tab-port:mx-32"
             alt
           />
@@ -45,7 +79,7 @@
       </div>
       <div class="w-full absolute phone-bottom min-phone: flex justify-center">
         <img
-          src="../assets/images/phone1.png"
+          src="https://iumi.cash/wp-content/uploads/2020/06/phone1.png"
           class="max-w-4xl min-phone:px-20 h-auto z-10 phone-up:hidden"
           alt
         />
@@ -73,7 +107,7 @@
         <!-- 6.5rem -->
         <div class="mt-24 flex w-full justify-between">
           <img
-            src="../assets/images/phone2.png"
+            src="https://iumi.cash/wp-content/uploads/2020/06/phone2.png"
             class="w-128 h-auto phone:hidden tab-port:mx-24 mr-32"
             alt
           />
@@ -168,7 +202,7 @@
         </div>
         <div class="absolute bottom-0 right-0">
           <img
-            src="../assets/images/girl.png"
+            src="https://iumi.cash/wp-content/uploads/2020/06/girl.png"
             class="max-w-5xl laptop:px-32 phone:px-0 phone:max-w-6lg phone:-mr-48 tab-port:max-w-4xl px-10 -mr-24"
             alt
           />
@@ -182,7 +216,11 @@
           class="flex justify-between tablet-port:justify-around w-full phone:px-8 tab-port:px-24 mt-24"
         >
           <div>
-            <img src="../assets/images/phone3.png" class="w-128 h-auto phone:hidden" alt />
+            <img
+              src="https://iumi.cash/wp-content/uploads/2020/06/phone3.png"
+              class="w-128 h-auto phone:hidden"
+              alt
+            />
           </div>
           <div class="flex-1 tab-port:ml-20 tab-land:ml-32 phone:ml-0 ml-80 w-full">
             <!-- accordion -->
@@ -317,7 +355,11 @@
           </div>
         </div>
       </div>
-      <img src="../assets/images/shape2.png" class="absolute w-30vw top-0 left-0 h-full z-0" alt />
+      <img
+        src="https://iumi.cash/wp-content/uploads/2020/06/shape2.png"
+        class="absolute w-30vw top-0 left-0 h-full z-0"
+        alt
+      />
     </div>
   </div>
 </template>
