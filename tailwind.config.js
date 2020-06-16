@@ -39,7 +39,7 @@ module.exports = {
 
     },
     fontFamily: {
-      body: ['Myriad Set Pro']
+      body: ['Myriad Pro']
     },
     fontSize: {
       xs: '0.75rem',
