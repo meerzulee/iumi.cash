@@ -77,14 +77,14 @@
           />
         </div>
       </div>
-      <div class="w-full absolute phone-bottom min-phone: flex justify-center">
+      <div class="w-full absolute phone-bottom phone:flex justify-center">
         <img
           src="https://iumi.cash/wp-content/uploads/2020/06/phone1.png"
-          class="max-w-4xl min-phone:px-20 h-auto z-10 phone-up:hidden"
+          class="min-phone:px-20 h-auto z-10 phone-up:hidden"
           alt
         />
       </div>
-      <div class="absolute bottom-0 w-full flex justify-center tab-port:mb-32 mb-64">
+      <div class="absolute bottom-0 w-full flex justify-center tab-port:mb-32 mb-36">
         <ScrollIcon
           v-scroll-to="{el: '#features',
          duration: 1100,
@@ -112,7 +112,7 @@
             alt
           />
           <div class="flex flex-1 justify-center">
-            <div class="flex flex-col max-w-5lg items-center phone:w-full phone:mx-16">
+            <div class="flex flex-col max-w-5lg items-center phone:w-full phone:mx-12">
               <!-- hover cards -->
               <div class="group hover-card" v-for="(item, index) in cards" :key="index">
                 <!-- svg -->
@@ -134,67 +134,64 @@
           </div>
         </div>
       </div>
-      <div class="absolute bottom-0 phone:hidden w-full flex justify-center mb-8">
-        <ScrollIcon
-          v-scroll-to="{el: '#pricing',
-         duration: 1100,
-         easing: 'ease-in-out'}"
-          :dark="true"
-        />
-      </div>
     </div>
-    <div class="h-screen tab-land:h-auto phone:pt-20 pt-32 bg-light overflow-hidden" id="pricing">
+    <div
+      class="h-screen phone:h-auto tab-land:h-auto phone:pt-20 pt-32 bg-light overflow-hidden"
+      id="pricing"
+    >
       <div
         class="container mx-auto flex flex-col tab-land:pb-32 items-center mt-10 h-full relative"
       >
-        <h1 class="text-6xl phone:text-5lg font-bold text-jp-100 mt-4">Pricing</h1>
-        <p class="text-5xl phone:text-4xl text-center mt-5">
+        <h1 class="text-6xl phone:text-5xl font-bold text-jp-100 mt-4">Pricing</h1>
+        <p class="text-5xl phone:text-5lg text-center mt-5">
           No cost for the App.
           No monthly
           <br class="phone-up:hidden" />account keeping fees.
         </p>
         <div class="flex w-full h-full tab-land:mt-32 phone:mt-14 phone:p-0 pl-24">
           <div class="flex mt-24 phone:mt-0 phone:flex-col phone:items-center justify-start w-full">
-            <div class="max-w-md h-auto w-full phone:z-10">
+            <div class="phone:max-w-lg max-w-md h-auto w-full phone:z-10">
               <div
-                class="flex flex-col h-auto items-center justify-between rounded-card bg-white w-full card-shadow phone:max-h-lg phone:min-h-full"
+                class="flex flex-col h-auto items-center justify-between rounded-card bg-white w-full card-shadow phone:max-h-2xl phone:min-h-full"
               >
                 <div
-                  class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-48 phone:h-40"
+                  class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-48 phone:h-60"
                 >
-                  <h3 class="text-5lg font-bold text-white mt-10">Basic</h3>
+                  <h3 class="text-5lg phone:text-5xl font-bold text-white mt-12">Basic</h3>
                 </div>
-                <p class="text-5lg phone:text-4xl text-center px-9 mt-18 leading-tight">
+                <p class="text-5lg phone:text-5lg text-center px-9 mt-18 leading-tight">
                   Flat 1% fee
                   <br class="phone:hidden" />on all transfers,
                   <br />paid by the sender.
                 </p>
                 <a
                   href="#"
-                  class="my-24 phone:my-10 px-7 py-2 bg-gradient w-auto text-white rounded-full phone:text-4xl text-5lg card-shadow"
+                  class="my-24 phone:my-10 px-7 py-2 bg-gradient w-auto text-white rounded-full text-5lg min-phone:text-4xl card-shadow"
                 >Get started</a>
               </div>
             </div>
-            <div class="max-w-md w-full phone:ml-0 ml-12 phone:mt-24 mt-36 phone:z-10">
+            <div class="phone:max-w-lg max-w-md w-full phone:ml-0 ml-12 phone:mt-24 mt-36 z-20">
               <div
-                class="flex flex-col h-auto items-center justify-between rounded-card bg-white w-full card-shadow phone:max-h-lg phone:min-h-full"
+                class="flex flex-col h-auto items-center justify-between rounded-card bg-white w-full card-shadow phone:max-h-2xl phone:min-h-full"
               >
                 <div
-                  class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-48 phone:h-40"
+                  class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-48 phone:h-60"
                 >
-                  <h3 class="text-5lg font-bold phone:mb-8 text-white mt-10 text-center">
+                  <h3
+                    class="text-5lg phone:text-5xl font-bold phone:mb-8 text-white mt-10 text-center"
+                  >
                     High Volume
                     <br class="phone-up:hidden" />Business Customers
                   </h3>
                 </div>
-                <p class="text-5lg phone:text-4xl phone:mt-12 text-center px-9 mt-18 leading-tight">
+                <p class="text-5lg phone:text-5lg phone:mt-12 text-center px-9 mt-18 leading-tight">
                   Contact us
                   <br />info@iumi.cash
                   <br />for volume discounts
                 </p>
                 <a
                   href="#"
-                  class="my-24 phone:my-10 px-7 py-2 bg-gradient w-auto text-white rounded-full text-5lg phone:text-4xl card-shadow"
+                  class="my-24 phone:my-10 px-7 py-2 bg-gradient w-auto text-white rounded-full text-5lg min-phone:text-4xl card-shadow"
                 >Get started</a>
               </div>
             </div>
@@ -203,7 +200,7 @@
         <div class="absolute bottom-0 right-0">
           <img
             src="https://iumi.cash/wp-content/uploads/2020/06/girl.png"
-            class="max-w-5xl laptop:px-32 phone:px-0 phone:max-w-6lg phone:-mr-48 tab-port:max-w-4xl px-10 -mr-24"
+            class="max-w-5xl laptop:px-32 phone:px-0 phone:max-w-6lg phone:-mr-48 tab-port:max-w-4xl px-16 -mr-24"
             alt
           />
         </div>
@@ -222,7 +219,7 @@
               alt
             />
           </div>
-          <div class="flex-1 tab-port:ml-20 tab-land:ml-32 phone:ml-0 ml-80 w-full">
+          <div class="flex-1 tab-port:ml-20 tab-land:ml-32 phone:ml-0 ml-72 w-full">
             <!-- accordion -->
             <Accordion />
             <!-- /accordion -->
@@ -348,7 +345,7 @@
                 <br class="phone:hidden" />Commonwealth Street, Honiara.
               </p>
             </div>
-            <div class="flex flex-col phone:flex-row justify-between phone:mt-14">
+            <div class="flex flex-col phone:flex-row phone:justify-between phone:mt-14">
               <a href="#" class="font-semibold text-4lg">Term & Conditions</a>
               <a href="#" class="font-semibold text-4lg mt-4">Privacy Policy</a>
             </div>

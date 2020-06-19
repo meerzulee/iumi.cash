@@ -12,7 +12,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/test',
+    path: '/privacy',
     name: 'Responsive',
     component: Responsive
   }

@@ -19,15 +19,30 @@
           </a>
         </div>
         <!-- linkss -->
-        <div class="flex items-center phone:hidden">
+        <scrollactive
+          active-class="text-jp-100"
+          :duration="1100"
+          bezier-easing-value=".5,0,.35,1"
+          class="flex items-center phone:hidden"
+        >
           <!-- <router-link to="/">Home</router-link>| -->
           <a
-            class="nav-links"
-            v-scroll-to="{el: '#home',
+            v-for="(item, index) in navs"
+            :key="index"
+            class="nav-links scrollactive-item"
+            :href="item.link"
+          >{{item.title}}</a>
+          <!-- <a
+            v-for="(item, index) in navs"
+            :key="index"
+            class="nav-links scrollactive-item"
+          
+            :class="{ 'text-jp-100': item.isActive}"
+            v-scroll-to="{el: item.link,
          duration: 1100,
          easing: 'ease-in-out'}"
-          >Home</a>
-          <a
+          >{{item.title}}</a>-->
+          <!-- <a
             class="nav-links"
             v-scroll-to="{el: '#features',
          duration: 1100,
@@ -50,9 +65,9 @@
             v-scroll-to="{el: '#contacts',
          duration: 1100,
          easing: 'ease-in-out'}"
-          >Contacts</a>
+          >Contacts</a>-->
           <!-- <router-link to="/">About</router-link> -->
-        </div>
+        </scrollactive>
         <!-- cta -->
         <div class="flex items-center phone-up:hidden">
           <a
@@ -64,7 +79,7 @@
         </div>
         <a
           href="#"
-          class="mr-10 phone:mr-0 bg-transparent border-jp-200 rounded-full border-2 text-3xl text-jp-200 uppercase font-bold px-8 py-2 leading-relaxed flex items-center hover:border-transparent hover:text-white hover:bg-jp-200 phone:font-bold"
+          class="mr-10 phone:mr-0 bg-transparent border-jp-200 phone:leading-snug phone:py-4 rounded-full border-2 text-3xl text-jp-200 uppercase font-bold px-8 py-2 leading-relaxed flex items-center hover:border-transparent hover:text-white hover:bg-jp-200 phone:font-bold"
         >get the app</a>
       </div>
     </div>
@@ -77,6 +92,37 @@
 export default {
   components: {
     // FixedHeader
+  },
+  data() {
+    return {
+      navs: [
+        {
+          title: "Home",
+          link: "#home",
+          isActive: false
+        },
+        {
+          title: "Features",
+          link: "#features",
+          isActive: false
+        },
+        {
+          title: "Pricing",
+          link: "#pricing",
+          isActive: false
+        },
+        {
+          title: "FAQs",
+          link: "#faqs",
+          isActive: false
+        },
+        {
+          title: "Contacts",
+          link: "#contacts",
+          isActive: false
+        }
+      ]
+    };
   }
 };
 </script>

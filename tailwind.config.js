@@ -31,7 +31,9 @@ module.exports = {
       '48': '12rem',
       '52': '13rem',
       '56': '14rem',
+      '60': '15rem',
       '64': '16rem',
+      '72': '18rem',
       '80': '20rem',
       '128': '32rem',
       '30vw': '30vw',
@@ -179,7 +181,7 @@ module.exports = {
       },
       'min-phone': {
         // <350px
-        max: '23.75em'
+        max: '21.875em'
       },
       'phone-up': {
         // <600px

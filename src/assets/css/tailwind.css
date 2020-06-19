@@ -78,7 +78,7 @@ body {
 
 @screen phone{
 	.footer-input {
-		@apply w-full mt-12;
+		@apply w-full mt-14 text-5lg;
 	}
 }
 
@@ -115,10 +115,10 @@ body {
 	height: 100% !important;
 }
 .phone-bottom {
-	bottom: -60rem;
+	bottom: -65rem;
 }
 @screen min-phone{
 	.phone-bottom {
-		bottom: -80rem;
+		bottom: -70rem;
 	}
 }
