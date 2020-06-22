@@ -43,7 +43,7 @@ html {
 @screen min-phone{
 	html{
 		/* 1 rem = 5px */
-		font-size: 31.25%
+		font-size: 36%
 	}
 }
 
@@ -119,6 +119,28 @@ body {
 }
 @screen min-phone{
 	.phone-bottom {
-		bottom: -70rem;
+		bottom: -60rem;
 	}
 }
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey; 
+	border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: linear-gradient(to bottom, #7a539d, #2d3494); 
+	border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #2D3494; 
+  }

@@ -150,7 +150,7 @@
         </p>
         <div class="flex w-full h-full tab-land:mt-32 phone:mt-14 phone:p-0 pl-24">
           <div class="flex mt-24 phone:mt-0 phone:flex-col phone:items-center justify-start w-full">
-            <div class="phone:max-w-lg max-w-md h-auto w-full phone:z-10">
+            <div class="phone:max-w-xl max-w-md h-auto w-full phone:z-10">
               <div
                 class="flex flex-col h-auto items-center justify-between rounded-card bg-white w-full card-shadow phone:max-h-2xl phone:min-h-full"
               >
@@ -170,7 +170,7 @@
                 >Get started</a>
               </div>
             </div>
-            <div class="phone:max-w-lg max-w-md w-full phone:ml-0 ml-12 phone:mt-24 mt-36 z-20">
+            <div class="phone:max-w-xl max-w-md w-full phone:ml-0 ml-12 phone:mt-24 mt-36 z-20">
               <div
                 class="flex flex-col h-auto items-center justify-between rounded-card bg-white w-full card-shadow phone:max-h-2xl phone:min-h-full"
               >
@@ -191,7 +191,7 @@
                 </p>
                 <a
                   href="#"
-                  class="my-24 phone:my-10 px-7 py-2 bg-gradient w-auto text-white rounded-full text-5lg min-phone:text-4xl card-shadow"
+                  class="my-24 phone:my-10 phone:mb-18 px-7 py-2 bg-gradient w-auto text-white rounded-full text-5lg min-phone:text-4xl card-shadow"
                 >Get started</a>
               </div>
             </div>
@@ -346,8 +346,10 @@
               </p>
             </div>
             <div class="flex flex-col phone:flex-row phone:justify-between phone:mt-14">
-              <a href="#" class="font-semibold text-4lg">Term & Conditions</a>
-              <a href="#" class="font-semibold text-4lg mt-4">Privacy Policy</a>
+              <router-link class="font-semibold text-4lg" to="/aml-policy">AML Policy</router-link>
+              <router-link class="font-semibold text-4lg" to="/privacy-policy">Privacy Policy</router-link>
+              <!-- <a href="#" class="font-semibold text-4lg">AML Policy</a> -->
+              <!-- <a href="#" class="font-semibold text-4lg mt-4">Privacy Policy</a> -->
             </div>
           </div>
         </div>
