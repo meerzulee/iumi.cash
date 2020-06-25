@@ -56,6 +56,7 @@ module.exports = {
       '5lg': '2.5rem',
       '5xl': '3rem',
       '6lg': '4rem',
+      '6md': '3.5rem',
       '6xl': '4.5rem',
     },
 
@@ -196,7 +197,14 @@ module.exports = {
           '200': '#323790'
         },
         'light': '#F6F7FB',
-        studio: '#7A539D'
+        studio: '#7A539D',
+        'smoke-900': 'rgba(0, 0, 0, 0.9)',
+        'smoke-800': 'rgba(0, 0, 0, 0.75)',
+        'smoke-600': 'rgba(0, 0, 0, 0.6)',
+        'smoke': 'rgba(0, 0, 0, 0.5)',
+        'smoke-400': 'rgba(0, 0, 0, 0.4)',
+        'smoke-200': 'rgba(0, 0, 0, 0.25)',
+        'smoke-100': 'rgba(0, 0, 0, 0.1)',
       },
       boxShadow: {
         card: '-2px 8px 10px rgba(0, 0, 0, 0.25)'

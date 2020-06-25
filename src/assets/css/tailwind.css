@@ -66,13 +66,22 @@ body {
 	@apply bg-white shadow-card;
 }
 
-.footer-input {
-	@apply appearance-none bg-transparent text-jp-200 text-4xl w-80 px-1 border-b border-black;
+.fform div {
+	@apply w-80
 }
 
+.footer-input {
+	@apply appearance-none bg-transparent text-jp-200 w-full text-4xl px-1 border-b border-black;
+}
+.p-error{
+	@apply text-red-500 text-lg  mt-1
+}
 @screen tab-port{
-	.footer-input {
+	.fform div {
 		@apply w-1/3;
+	}
+	.p-error{
+		@apply  text-xl
 	}
 }
 
@@ -80,12 +89,29 @@ body {
 	.footer-input {
 		@apply w-full mt-14 text-5lg;
 	}
+	.fform div{
+		@apply w-full
+	}
+	.p-error{
+		@apply  text-2xl
+	}
 }
 
 
 .footer-input:focus {
 	@apply outline-none border-jp-200;
 }
+
+.privacy  b {
+	@apply text-jp-100
+}
+.form-error:focus {
+	@apply border-red-500 text-red-500
+}
+.form-error {
+	@apply border-red-500 text-red-500
+}
+
 
 
 
@@ -144,3 +170,4 @@ body {
   ::-webkit-scrollbar-thumb:hover {
 	background: #2D3494; 
   }
+    
