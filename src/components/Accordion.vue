@@ -2,7 +2,7 @@
   <div>
     <div
       class="mt-10 flex flex-col p-8 w-full rounded-semi-card border-2 border-jp-200"
-      v-for="(item, index) in accordiodItems"
+      v-for="(item, index) in data"
       :key="index"
     >
       <div class="flex justify-between items-center cursor-pointer" @click="toggleAcc(index)">
@@ -62,39 +62,11 @@ export default {
   components: {
     TransitionExpand
   },
-  data() {
-    return {
-      accordiodItems: [
-        {
-          title: "How do I download the app?",
-          value:
-            "Visit Apple App Store or Google Play Store and search for iumiCash. Download for free and commence the 6 step sign up process",
-          isActive: false
-        },
-        {
-          title: "How do I put funds into my account?",
-          value:
-            "Visit any of our agents on our agents-list to deposit funds into your account fee free with a 1:1 conversion between $SBD and iumiCash",
-          isActive: false
-        },
-        {
-          title: "How do I convert iumiCash to Solomon Dollars?",
-          value:
-            "Visit any of our agents on our agents-list to redeem $SBD from your account fee free with a 1:1 conversion between iumiCash and $SBD",
-          isActive: false
-        },
-        {
-          title: "What are the costs of using iumiCash?",
-          value:
-            "There are no signup costs, no monthly costs just a 1% transaction fee on funds sent. The receiver pays no fee.",
-          isActive: false
-        }
-      ]
-    };
-  },
+  props: ["data"],
+
   methods: {
     toggleAcc(index) {
-      this.accordiodItems.forEach((e, i) => {
+      this.data.forEach((e, i) => {
         if (i != index) {
           e.isActive = false;
         } else {

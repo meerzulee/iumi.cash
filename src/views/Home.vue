@@ -15,12 +15,14 @@
           <div class="flex flex-col pt-10 mt-52 phone:mt-16 phone:ml-0 tablet:ml-16">
             <h1
               class="text-6xl tab-mini:text-6lg phone:text-6lg font-bold text-jp-200 leading-tight phone:text-center"
+              v-html="data.home.slogan"
             >
-              Quick, easy and secure
+              <!-- Quick, easy and secure
               <br />next generation e-wallet
-              <br />for your smart phone
+              <br />for your smart phone-->
             </h1>
             <div class="flex mt-20 phone:justify-center items-center">
+              <!-- :href="data.home.appstore_link" -->
               <a
                 @click="showModal = true"
                 class="mr-5 flex cursor-pointer inline-block text-4xl phone:text-5lg font-bold bg-gradient items-center text-white py-6 px-9 phone:py-5 phone:px-8 rounded-full"
@@ -69,6 +71,7 @@
                 Play Store
               </a>
             </div>
+
             <Modal :showing="showModal" @close="showModal = false">
               <div class="overflow-auto max-h-screen w-full">
                 <div class="flex flex-col items-center p-4 mt-4 justify-center">
@@ -109,12 +112,15 @@
       id="features"
     >
       <div class="container mx-auto flex flex-col phone:h-full items-center mt-4">
-        <h1 class="text-6xl phone:text-5xl font-bold text-jp-100">App Feature</h1>
-        <p class="text-5xl phone:text-5lg text-center leading-snug mt-5 z-30">
-          Just needs an internet connection via 3/4G,
+        <h1 class="text-6xl phone:text-5xl font-bold text-jp-100">{{data.features.title}}</h1>
+        <p
+          class="text-5xl phone:text-5lg text-center whitespace-pre-line leading-snug mt-5 z-30"
+          v-html="data.features.description"
+        >
+          <!-- Just needs an internet connection via 3/4G,
           <br class="phone-up:hidden" />LTE, WiFi or satellite.
           <br class="phone:hidden" />Safe, secure blockchain
-          <br class="phone-up:hidden" />solution to protect your money
+          <br class="phone-up:hidden" />solution to protect your money-->
         </p>
         <!-- 6.5rem -->
         <div class="mt-24 flex w-full justify-between">
@@ -154,11 +160,11 @@
       <div
         class="container mx-auto flex flex-col tab-land:pb-32 items-center mt-10 h-full relative"
       >
-        <h1 class="text-6xl phone:text-5xl font-bold text-jp-100 mt-4">Pricing</h1>
-        <p class="text-5xl phone:text-5lg text-center mt-5">
-          No cost for the App.
+        <h1 class="text-6xl phone:text-5xl font-bold text-jp-100 mt-4">{{data.pricing.title}}</h1>
+        <p class="text-5xl phone:text-5lg text-center mt-5" v-html="data.pricing.description">
+          <!-- No cost for the App.
           No monthly
-          <br class="phone-up:hidden" />account keeping fees.
+          <br class="phone-up:hidden" />account keeping fees.-->
         </p>
         <div class="flex w-full h-full tab-land:mt-32 phone:mt-14 phone:p-0 pl-24">
           <div class="flex mt-24 phone:mt-0 phone:flex-col phone:items-center justify-start w-full">
@@ -169,12 +175,18 @@
                 <div
                   class="w-full flex justify-center rounded-card rounded-b-none items-center bg-gradient h-48 phone:h-60"
                 >
-                  <h3 class="text-5lg phone:text-5xl font-bold text-white mt-12">Basic</h3>
+                  <h3
+                    class="text-5lg phone:text-5xl font-bold text-white mt-12"
+                    v-html="data.pricing.card1_title"
+                  ></h3>
                 </div>
-                <p class="text-5lg phone:text-5lg text-center px-9 mt-18 leading-tight">
-                  Flat 1% fee
+                <p
+                  class="text-5lg phone:text-5lg text-center px-9 mt-18 leading-tight"
+                  v-html="data.pricing.card1_desc"
+                >
+                  <!-- Flat 1% fee
                   <br class="phone:hidden" />on all transfers,
-                  <br />paid by the sender.
+                  <br />paid by the sender.-->
                 </p>
                 <a
                   href="#"
@@ -191,15 +203,19 @@
                 >
                   <h3
                     class="text-5lg phone:text-5xl font-bold phone:mb-8 text-white mt-10 text-center"
+                    v-html="data.pricing.card2_title"
                   >
-                    High Volume
-                    <br class="phone-up:hidden" />Business Customers
+                    <!-- High Volume
+                    <br class="phone-up:hidden" />Business Customers-->
                   </h3>
                 </div>
-                <p class="text-5lg phone:text-5lg phone:mt-12 text-center px-9 mt-18 leading-tight">
-                  Contact us
+                <p
+                  class="text-5lg phone:text-5lg phone:mt-12 text-center px-9 mt-18 leading-tight"
+                  v-html="data.pricing.card2_desc"
+                >
+                  <!-- Contact us
                   <br />for volume
-                  <br />discounts
+                  <br />discounts-->
                 </p>
                 <a
                   href="#"
@@ -218,9 +234,9 @@
         </div>
       </div>
     </div>
-    <div class="h-screen tab-land:h-auto pt-32" id="faqs">
+    <div class="min-h-screen tab-mini:h-auto pt-32" id="faqs">
       <div class="container mx-auto flex flex-col items-center pt-10 h-full">
-        <h1 class="text-6xl font-bold text-center text-jp-100 mt-6">Frequently Asked Questions</h1>
+        <h1 class="text-6xl font-bold text-center text-jp-100 mt-6">{{data.faq.title}}</h1>
         <div
           class="flex justify-between tablet-port:justify-around w-full phone:px-8 tab-port:px-24 mt-24"
         >
@@ -233,7 +249,7 @@
           </div>
           <div class="flex-1 tab-port:ml-20 tab-land:ml-32 phone:ml-0 ml-72 w-full">
             <!-- accordion -->
-            <Accordion />
+            <Accordion :data="accordions" />
             <!-- /accordion -->
           </div>
         </div>
@@ -280,7 +296,7 @@
       >
         <div class="flex w-full h-full bg-white tab-port:flex-col">
           <div class="w-1/2 tab-port:w-full px-28 phone:px-16 py-18 flex flex-col">
-            <h1 class="text-6xl font-bold text-jp-200">Contact Us</h1>
+            <h1 class="text-6xl font-bold text-jp-200">{{ data.contact.title}}</h1>
             <form @submit.prevent="submit">
               <div class="mt-6 flex phone:flex-col justify-between mr-8 fform">
                 <div>
@@ -389,7 +405,7 @@
                 class="font-semibold text-4lg phone:text-center phone:mt-2 phone:text-5lg"
               >Find us on:</p>
               <div class="flex justify-around phone:justify-center mt-2">
-                <a href="#">
+                <a href="https://www.facebook.com/iumicash" target="_blank">
                   <svg
                     class="w-12 h-12 phone:w-18 phone:h-18"
                     viewBox="0 0 31 30"
@@ -406,7 +422,7 @@
                     />
                   </svg>
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/iumicash/" target="_blank">
                   <svg
                     class="w-12 h-12 phone:w-18 phone:h-18 phone:mx-3"
                     viewBox="0 0 31 30"
@@ -448,10 +464,10 @@
             </div>
             <div class="flex flex-col items-center phone:mt-14">
               <p class="font-bold text-4lg phone:text-4xl text-center">Address:</p>
-              <p class="text-4lg phone:text-4xl text-center mt-2">
-                C/- Baoro and Associates,
+              <p class="text-4lg phone:text-4xl text-center mt-2" v-html="data.contact.address">
+                <!-- C/- Baoro and Associates,
                 <br class="phone:hidden" />Top Floor, Ysato Building,
-                <br class="phone:hidden" />Commonwealth Street, Honiara.
+                <br class="phone:hidden" />Commonwealth Street, Honiara.-->
               </p>
             </div>
             <div class="flex flex-col phone:flex-row phone:justify-between phone:mt-14">
@@ -480,29 +496,82 @@ const axios = require("axios");
 import Accordion from "../components/Accordion";
 import ScrollIcon from "../components/ScrollIcon";
 import Modal from "../components/Modal";
+
 export default {
   name: "Home",
+  created() {
+    axios.get("https://iumi.cash/wp-json/markers/v1/post").then(response => {
+      response.data.forEach(element => {
+        switch (element.post_name) {
+          case "home":
+            this.filterData(element.acf, this.data.home);
+            break;
+          case "features":
+            this.filterData(element.acf, this.data.features);
+            this.cards.forEach((element, index) => {
+              element.title = this.data.features[`ft${index + 1}_title`];
+              element.desc = this.data.features[`ft${index + 1}_desc`];
+            });
+            break;
+          case "pricing":
+            this.filterData(element.acf, this.data.pricing);
+            break;
+          case "faq":
+            this.filterData(element.acf, this.data.faq);
+            this.accordions.forEach((element, index) => {
+              element.title = this.data.faq[`question_${index + 1}`];
+              element.value = this.data.faq[`answer_${index + 1}`];
+            });
+            break;
+          case "contact":
+            this.filterData(element.acf, this.data.contact);
+            break;
+        }
+      });
+    });
+  },
   components: {
     Accordion,
     ScrollIcon,
     Modal
   },
+
   data() {
     return {
+      accordions: [
+        {
+          title: "",
+          value: "",
+          isActive: false
+        },
+        {
+          title: "",
+          value: "",
+          isActive: false
+        },
+        {
+          title: "",
+          value: "",
+          isActive: false
+        },
+        {
+          title: "",
+          value: "",
+          isActive: false
+        }
+      ],
       showModal: false,
       cards: [
         {
-          title: "User Friendly",
-          desc:
-            "Easy to use with in App chat function allowing you to send funds from the chat.",
+          title: "",
+          desc: "",
           svg: ` <path
                     d="M102.918 54.9672C106.403 52.5185 108.711 48.4451 108.711 43.8537C108.711 36.3426 102.636 30.2678 95.1247 30.2678C87.6136 30.2678 81.5388 36.3426 81.5388 43.8537C81.5388 48.4451 83.8227 52.5185 87.331 54.9672C84.3407 56.0033 81.6094 57.6044 79.3019 59.6764C76.1233 56.9686 72.3795 54.8966 68.2825 53.6722C73.2507 50.6584 76.5942 45.1722 76.5942 38.9326C76.5942 29.4202 68.8947 21.7207 59.3823 21.7207C49.8698 21.7207 42.1704 29.4437 42.1704 38.9326C42.1704 45.1722 45.4903 50.6584 50.482 53.6722C46.4321 54.8966 42.7355 56.9451 39.5803 59.6058C37.2729 57.5808 34.5886 56.0033 31.6454 54.9908C35.1302 52.542 37.4377 48.4686 37.4377 43.8772C37.4377 36.3661 31.3629 30.2913 23.8518 30.2913C16.3407 30.2913 10.2659 36.3661 10.2659 43.8772C10.2659 48.4686 12.5499 52.542 16.0582 54.9908C6.71053 58.2166 0 67.0933 0 77.524V79.0781C0 79.1252 0.0470914 79.1722 0.0941828 79.1722H28.8906C28.7258 80.4673 28.6316 81.8094 28.6316 83.1515V84.7526C28.6316 91.675 34.2355 97.2789 41.1579 97.2789H77.6537C84.5762 97.2789 90.1801 91.675 90.1801 84.7526V83.1515C90.1801 81.8094 90.0859 80.4673 89.9211 79.1722H118.906C118.953 79.1722 119 79.1252 119 79.0781V77.524C118.953 67.0697 112.266 58.193 102.918 54.9672ZM85.3061 43.8301C85.3061 38.4146 89.7091 34.0116 95.1247 34.0116C100.54 34.0116 104.943 38.4146 104.943 43.8301C104.943 49.175 100.634 53.531 95.313 53.6487C95.2424 53.6487 95.1953 53.6487 95.1247 53.6487C95.054 53.6487 95.0069 53.6487 94.9363 53.6487C89.5914 53.5545 85.3061 49.1985 85.3061 43.8301ZM45.8906 38.9326C45.8906 31.5157 51.9183 25.488 59.3352 25.488C66.7521 25.488 72.7798 31.5157 72.7798 38.9326C72.7798 46.0905 67.1524 51.9534 60.1122 52.3537C59.8532 52.3537 59.5942 52.3537 59.3352 52.3537C59.0762 52.3537 58.8172 52.3537 58.5582 52.3537C51.518 51.9534 45.8906 46.0905 45.8906 38.9326ZM13.9626 43.8301C13.9626 38.4146 18.3657 34.0116 23.7812 34.0116C29.1967 34.0116 33.5997 38.4146 33.5997 43.8301C33.5997 49.175 29.2909 53.531 23.9695 53.6487C23.8989 53.6487 23.8518 53.6487 23.7812 53.6487C23.7105 53.6487 23.6634 53.6487 23.5928 53.6487C18.2715 53.5545 13.9626 49.1985 13.9626 43.8301ZM29.5499 75.3814H3.8144C4.87396 65.3509 13.3504 57.4866 23.6399 57.416C23.687 57.416 23.7341 57.416 23.7812 57.416C23.8283 57.416 23.8753 57.416 23.9224 57.416C28.8199 57.4395 33.2936 59.2526 36.7548 62.1958C33.3643 65.8689 30.8449 70.3897 29.5499 75.3814ZM86.3656 84.7526C86.3656 89.5794 82.4335 93.5116 77.6067 93.5116H41.1108C36.2839 93.5116 32.3518 89.5794 32.3518 84.7526V83.1515C32.3518 68.5296 44.0305 56.5684 58.5582 56.1445C58.8172 56.1681 59.0997 56.1681 59.3587 56.1681C59.6177 56.1681 59.9003 56.1681 60.1593 56.1445C74.687 56.5684 86.3656 68.5296 86.3656 83.1515V84.7526ZM89.1676 75.3814C87.8726 70.4132 85.4003 65.9631 82.0332 62.29C85.518 59.2761 90.0388 57.4631 94.9834 57.416C95.0305 57.416 95.0776 57.416 95.1247 57.416C95.1717 57.416 95.2188 57.416 95.2659 57.416C105.555 57.4866 114.032 65.3509 115.091 75.3814H89.1676Z"
                   />`
         },
         {
-          title: "Secure",
-          desc:
-            "Safer than carrying cash. Password access to your account with a PIN number required to send money.",
+          title: "",
+          desc: "",
           svg: `   <path
                     d="M108.31 103.38L95.8257 87.3296C99.8712 86.1209 103.366 83.5336 105.703 80.0172C108.643 74.9351 107.313 68.7328 106.027 62.7417C105.249 59.6641 104.784 56.5158 104.638 53.3448C104.783 50.1711 105.248 47.0199 106.027 43.9397C107.305 37.9446 108.643 31.7463 105.703 26.6724C102.658 21.4118 96.5274 19.4647 90.5979 17.5853C87.6462 16.7721 84.7877 15.6526 82.0689 14.2451C79.6017 12.6448 77.3109 10.788 75.2346 8.70547C70.8357 4.62253 65.8479 0 59.4999 0C53.1519 0 48.1641 4.62253 43.7632 8.70341C41.6876 10.7864 39.3974 12.644 36.931 14.2451C34.2124 15.6498 31.3546 16.7664 28.404 17.5771C22.4745 19.4565 16.3439 21.4036 13.2992 26.6642C10.3591 31.7463 11.6886 37.9487 12.975 43.9397C13.7529 47.0201 14.2176 50.1711 14.362 53.3448C14.2168 56.5186 13.7516 59.6698 12.973 62.7499C11.6947 68.7451 10.357 74.9433 13.2971 80.0172C15.6371 83.5349 19.1356 86.1214 23.1844 87.3275L10.6894 103.378C9.99386 104.273 10.1552 105.562 11.05 106.257C11.4798 106.591 12.0246 106.741 12.5647 106.673L27.2345 104.841L30.8558 117.513C31.0679 118.255 31.6793 118.816 32.4377 118.963C32.5662 118.987 32.6967 119 32.8275 119C33.461 119.001 34.0593 118.708 34.4484 118.208L47.5507 101.355C50.775 104.494 55.0102 106.385 59.4999 106.69C63.9896 106.385 68.2249 104.494 71.4492 101.355L84.5515 118.202C84.9392 118.704 85.5376 118.999 86.1723 119C86.3031 119 86.4337 118.987 86.5622 118.963C87.3205 118.816 87.9319 118.255 88.144 117.513L91.7653 104.843L106.435 106.675C107.56 106.816 108.585 106.019 108.726 104.895C108.794 104.355 108.645 103.81 108.31 103.38ZM33.6892 112.498L30.6958 102.022C30.4175 101.05 29.4727 100.426 28.4696 100.551L16.98 101.987L27.2776 88.7494L28.4122 89.1125C31.36 89.9237 34.215 91.0404 36.931 92.4445C39.3981 94.0449 41.6889 95.9017 43.7652 97.9842L44.471 98.6366L33.6892 112.498ZM59.4999 102.586C54.7604 102.586 50.7739 98.8931 46.5515 94.9784C44.2543 92.6833 41.7169 90.6426 38.9827 88.891C36.0079 87.3337 32.8765 86.0957 29.6412 85.1979C24.2185 83.4765 19.0953 81.8515 16.8466 77.9655C14.7005 74.254 15.8084 69.0816 16.9841 63.6035C17.8302 60.244 18.3267 56.8063 18.4654 53.3448C18.3275 49.8833 17.8317 46.4456 16.9861 43.0862C15.8105 37.6102 14.7026 32.4378 16.8487 28.7241C19.1056 24.8382 24.2205 23.2132 29.6432 21.4918C32.878 20.5937 36.0084 19.3557 38.9827 17.7987C41.7161 16.047 44.253 14.0061 46.5494 11.7112C50.7739 7.79655 54.7604 4.10345 59.4999 4.10345C64.2394 4.10345 68.2259 7.79655 72.4483 11.7112C74.7455 14.0064 77.283 16.047 80.0172 17.7987C82.9919 19.356 86.1234 20.5939 89.3587 21.4918C94.7814 23.2132 99.9045 24.8382 102.153 28.7241C104.299 32.4357 103.191 37.6081 102.016 43.0862C101.17 46.4456 100.673 49.8833 100.534 53.3448C100.672 56.8063 101.168 60.244 102.014 63.6035C103.189 69.0795 104.297 74.2519 102.151 77.9655C99.8943 81.8515 94.7793 83.4765 89.3566 85.1979C86.1218 86.096 82.9914 87.334 80.0172 88.891C77.2838 90.6426 74.7468 92.6836 72.4504 94.9784C68.2259 98.8931 64.2394 102.586 59.4999 102.586ZM90.5405 100.551C89.5374 100.426 88.5926 101.05 88.3143 102.022L85.3106 112.498L74.5308 98.6387L75.2366 97.9862C77.3122 95.9032 79.6025 94.0456 82.0689 92.4445C84.7874 91.0399 87.6452 89.9232 90.5958 89.1125L91.7305 88.7494L102.03 101.987L90.5405 100.551Z"
                   />
@@ -514,8 +583,8 @@ export default {
                   />`
         },
         {
-          title: "Easy Sign up Process",
-          desc: "Simple six step process to sign up.",
+          title: "",
+          desc: "",
           svg: ` <path d="M44.4815 96.9039C56.2734 96.9039 65.8667 87.3106 65.8667 75.5186C65.8667 63.7266 56.2734 54.1333 44.4815 54.1333C32.6895 54.1333 23.0962 63.7266 23.0962 75.5186C23.0962 87.3106 32.6898 96.9039 44.4815 96.9039ZM44.4815 57.7993C54.252 57.7993 62.2007 65.7481 62.2007 75.5186C62.2007 85.2891 54.252 93.2378 44.4815 93.2378C34.711 93.2378 26.7622 85.2891 26.7622 75.5186C26.7622 65.7481 34.7112 57.7993 44.4815 57.7993Z" />
                   <path d="M18.9414 75.5187C18.9414 61.4357 30.3986 49.9785 44.4816 49.9785C48.3123 49.9785 51.995 50.8054 55.4272 52.436C56.3415 52.8703 57.4349 52.4812 57.8695 51.5669C58.3038 50.6526 57.9149 49.5592 57.0004 49.1246C53.0728 47.2586 48.861 46.3125 44.4816 46.3125C28.3771 46.3125 15.2754 59.4142 15.2754 75.5187C15.2754 82.1491 17.4415 88.3997 21.5394 93.5942C21.9012 94.0527 22.4379 94.292 22.9797 94.292C23.3771 94.292 23.7774 94.1632 24.1137 93.898C24.9085 93.2711 25.0447 92.1185 24.4175 91.3237C20.8351 86.7825 18.9414 81.3171 18.9414 75.5187Z" />
                   <path d="M68.4336 62.1309C67.5193 62.5652 67.1302 63.6587 67.5645 64.5732C69.1949 68.0054 70.0215 71.6878 70.0215 75.5183C70.0215 89.6013 58.5644 101.058 44.4814 101.058C38.6812 101.058 33.2146 99.1638 28.6729 95.5794C27.8783 94.9525 26.7257 95.0884 26.0983 95.8827C25.4712 96.6775 25.6068 97.8301 26.4016 98.4573C31.5969 102.557 37.8488 104.725 44.4814 104.725C60.5858 104.725 73.6875 91.6228 73.6875 75.5183C73.6875 71.1394 72.7415 66.9278 70.8759 63C70.4416 62.0859 69.3484 61.6964 68.4336 62.1309Z" />
@@ -524,6 +593,46 @@ export default {
                   <path d="M97.6607 15.8538C91.7139 13.4835 84.9486 16.3929 82.5784 22.3392C80.2081 28.2856 83.1175 35.0516 89.0639 37.4216C90.4694 37.9818 91.92 38.247 93.3483 38.247C97.9623 38.247 102.336 35.4767 104.146 30.9359C106.516 24.9898 103.607 18.2237 97.6607 15.8538ZM100.741 29.5787C99.1191 33.647 94.4899 35.6377 90.421 34.0161C86.3527 32.3942 84.3618 27.765 85.9836 23.6964C87.222 20.5896 90.2148 18.6942 93.372 18.6942C94.3491 18.6942 95.3419 18.8758 96.3033 19.259C100.372 20.8809 102.363 25.5101 100.741 29.5787Z" />`
         }
       ],
+      data: {
+        home: {
+          slogan: "",
+          appstore_link: "",
+          playstore_link: ""
+        },
+        features: {
+          title: "",
+          description: "",
+          ft1_title: "",
+          ft1_desc: "",
+          ft2_title: "",
+          ft2_desc: "",
+          ft3_title: "",
+          ft3_desc: ""
+        },
+        pricing: {
+          title: "",
+          description: "",
+          card1_title: "",
+          card1_desc: "",
+          card2_title: "",
+          card2_desc: ""
+        },
+        faq: {
+          title: "",
+          question_1: "",
+          answer_1: "",
+          question_2: "",
+          answer_2: "",
+          question_3: "",
+          answer_3: "",
+          question_4: "",
+          answer_4: ""
+        },
+        contact: {
+          title: "",
+          address: ""
+        }
+      },
       form: {
         firstname: "",
         lastname: "",
@@ -585,6 +694,14 @@ export default {
           });
       } else {
         console.log("error");
+      }
+    },
+    filterData(acf, data) {
+      for (const [key, value] of Object.entries(acf)) {
+        if (value != "") {
+          // data[key] = `<span>${value}</span>`;
+          data[key] = value;
+        }
       }
     }
   }
