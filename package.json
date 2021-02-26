@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --port 4000",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
@@ -12,8 +12,10 @@
     "tailwindcss": "^1.4.6",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
+    "vue-scrollactive": "^0.9.3",
     "vue-scrollto": "^2.18.1",
-    "vue-transition-expand": "^0.1.0"
+    "vue-transition-expand": "^0.1.0",
+    "vuelidate": "^0.7.5"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.2.0",

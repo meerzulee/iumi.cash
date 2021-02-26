@@ -11,7 +11,7 @@
       </div>
     </div>
     <p
-      class="text-xl text-jacksons_purple-200 phone:mt-1"
+      class="text-4xl text-jacksons_purple-200 phone:mt-1"
       :class="[dark ? '' : 'phone:text-white']"
     >Scroll down for more</p>
   </div>
@@ -29,18 +29,14 @@ export default {
   bottom: 10%;
   left: 50%;
   width: auto;
-  height: 3.125em;
+  height: 3rem;
   transform: translateX(-50%);
   z-index: 99999;
 }
 
-.icon-scroll span {
-  animation-delay: 0.2s;
-}
-
 .icon-scroll .mouse {
-  height: 1.275em;
-  width: 0.875em;
+  height: 2em;
+  width: 1.2em;
   border: 1px solid #323790;
   border-radius: 2em;
 }
@@ -48,14 +44,14 @@ export default {
 .icon-scroll .wheel {
   position: relative;
   display: block;
-  height: 0.19em;
-  width: 0.187em;
+  height: 0.35em;
+  width: 0.2em;
   margin: 0.19em auto 0.1875em auto;
   background: #323790;
   animation: mouse-wheel 1.2s ease infinite;
   border-radius: 25px;
 }
-@screen phone {
+/* @screen phone {
   .icon-scroll .mouse {
     height: 1.5em;
     width: 1em;
@@ -71,7 +67,7 @@ export default {
   .icon-scroll .wheelw {
     background: #fff;
   }
-}
+} */
 
 @keyframes mouse-wheel {
   0% {
