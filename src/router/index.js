@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Privacy from '../views/Privacy.vue'
 import AML from '../views/AML.vue'
+import Terms from '../views/Terms.vue'
+
 
 Vue.use(VueRouter)
 
@@ -11,6 +13,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/terms-conditions',
+    name: 'Terms',
+    component: Terms
   },
   {
     path: '/privacy-policy',

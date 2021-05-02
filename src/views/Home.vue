@@ -473,6 +473,8 @@
             <div class="flex flex-col phone:flex-row phone:justify-between phone:mt-14">
               <router-link class="font-semibold text-4lg" to="/aml-policy">AML Statement</router-link>
               <router-link class="font-semibold text-4lg" to="/privacy-policy">Privacy Policy</router-link>
+              <router-link class="font-semibold text-4lg" to="/terms-conditions">Terms & Conditions</router-link>
+
               <!-- <a href="#" class="font-semibold text-4lg">AML Policy</a> -->
               <!-- <a href="#" class="font-semibold text-4lg mt-4">Privacy Policy</a> -->
             </div>
